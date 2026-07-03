@@ -1,0 +1,19 @@
+[project]
+name = "inboxworld"
+version = "0.1.0"
+description = "A multi-agent email triage environment for Round 2."
+requires-python = ">=3.10"
+dependencies = [
+    "huggingface_hub==0.34.4",
+    "gradio==5.0.0",
+]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]

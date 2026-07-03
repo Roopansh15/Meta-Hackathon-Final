@@ -1,0 +1,9 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='640' height='320'>
+  <rect width='100%' height='100%' fill='#fffdf8'/>
+  <line x1='40' y1='280' x2='600' y2='280' stroke='#1f2937' stroke-width='2'/>
+  <line x1='40' y1='40' x2='40' y2='280' stroke='#1f2937' stroke-width='2'/>
+  <polyline fill='none' stroke='#0f766e' stroke-width='3' points='40.0,40.0 120.0,280.0 200.0,40.0 280.0,280.0 360.0,40.0 440.0,280.0 520.0,40.0 600.0,280.0'/>
+  <text x='320.0' y='24' font-size='18' text-anchor='middle'>Reward vs Episode</text>
+  <text x='16' y='160.0' font-size='12' transform='rotate(-90 16,160.0)'>Reward</text>
+  <text x='40.0' y='310' font-size='12'>E1</text><text x='120.0' y='310' font-size='12'>E2</text><text x='200.0' y='310' font-size='12'>E3</text><text x='280.0' y='310' font-size='12'>E4</text><text x='360.0' y='310' font-size='12'>E5</text><text x='440.0' y='310' font-size='12'>E6</text><text x='520.0' y='310' font-size='12'>E7</text><text x='600.0' y='310' font-size='12'>E8</text>
+</svg>

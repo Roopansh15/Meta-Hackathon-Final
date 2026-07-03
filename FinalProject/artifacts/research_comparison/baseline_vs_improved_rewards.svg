@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="520" viewBox="0 0 980 520" role="img" aria-labelledby="title desc">
+  <title id="title">Baseline vs Improved Multi-Agent Reward Comparison</title>
+  <desc id="desc">Line chart comparing baseline negative rewards against improved multi-agent positive rewards across eight benchmark episodes.</desc>
+  <rect width="980" height="520" fill="#ffffff"/>
+  <text x="490" y="34" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="26" font-weight="700" fill="#0f172a">Baseline vs Improved Multi-Agent Policy</text>
+  <text x="490" y="62" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#526173">Reward history across identical InboxWorld benchmark episodes</text>
+
+  <line x1="86" y1="78" x2="86" y2="414" stroke="#334155" stroke-width="2"/>
+  <line x1="86" y1="414" x2="934" y2="414" stroke="#334155" stroke-width="2"/>
+  <line x1="86" y1="98" x2="934" y2="98" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="86" y1="201" x2="934" y2="201" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="86" y1="305" x2="934" y2="305" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="86" y1="414" x2="934" y2="414" stroke="#334155" stroke-width="2"/>
+  <line x1="86" y1="253" x2="934" y2="253" stroke="#94a3b8" stroke-dasharray="6 6" stroke-width="1.5"/>
+
+  <text x="66" y="103" text-anchor="end" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#475569">+120</text>
+  <text x="66" y="206" text-anchor="end" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#475569">0</text>
+  <text x="66" y="310" text-anchor="end" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#475569">-100</text>
+  <text x="66" y="419" text-anchor="end" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#475569">-160</text>
+  <text x="930" y="245" text-anchor="end" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#64748b">zero reward line</text>
+
+  <polyline points="86,291 207,370 328,291 449,370 571,291 692,370 813,291 934,370" fill="none" stroke="#b42318" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+  <polyline points="86,117 207,63 328,117 449,63 571,117 692,63 813,117 934,63" fill="none" stroke="#147a58" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+
+  <g fill="#ffffff" stroke-width="4">
+    <circle cx="86" cy="291" r="7" stroke="#b42318"/>
+    <circle cx="207" cy="370" r="7" stroke="#b42318"/>
+    <circle cx="328" cy="291" r="7" stroke="#b42318"/>
+    <circle cx="449" cy="370" r="7" stroke="#b42318"/>
+    <circle cx="571" cy="291" r="7" stroke="#b42318"/>
+    <circle cx="692" cy="370" r="7" stroke="#b42318"/>
+    <circle cx="813" cy="291" r="7" stroke="#b42318"/>
+    <circle cx="934" cy="370" r="7" stroke="#b42318"/>
+    <circle cx="86" cy="117" r="7" stroke="#147a58"/>
+    <circle cx="207" cy="63" r="7" stroke="#147a58"/>
+    <circle cx="328" cy="117" r="7" stroke="#147a58"/>
+    <circle cx="449" cy="63" r="7" stroke="#147a58"/>
+    <circle cx="571" cy="117" r="7" stroke="#147a58"/>
+    <circle cx="692" cy="63" r="7" stroke="#147a58"/>
+    <circle cx="813" cy="117" r="7" stroke="#147a58"/>
+    <circle cx="934" cy="63" r="7" stroke="#147a58"/>
+  </g>
+
+  <g font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#475569">
+    <text x="86" y="438" text-anchor="middle">Ep 1</text>
+    <text x="207" y="438" text-anchor="middle">Ep 2</text>
+    <text x="328" y="438" text-anchor="middle">Ep 3</text>
+    <text x="449" y="438" text-anchor="middle">Ep 4</text>
+    <text x="571" y="438" text-anchor="middle">Ep 5</text>
+    <text x="692" y="438" text-anchor="middle">Ep 6</text>
+    <text x="813" y="438" text-anchor="middle">Ep 7</text>
+    <text x="934" y="438" text-anchor="middle">Ep 8</text>
+  </g>
+
+  <rect x="118" y="462" width="744" height="42" rx="10" fill="#f8fafc" stroke="#d7dee9"/>
+  <line x1="147" y1="483" x2="205" y2="483" stroke="#b42318" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="176" cy="483" r="6" fill="#ffffff" stroke="#b42318" stroke-width="4"/>
+  <text x="220" y="488" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#172033">Baseline: average reward -117.5, missed deadlines 60</text>
+  <line x1="552" y1="483" x2="610" y2="483" stroke="#147a58" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="581" cy="483" r="6" fill="#ffffff" stroke="#147a58" stroke-width="4"/>
+  <text x="625" y="488" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#172033">Improved: average reward +102.0, missed deadlines 0</text>
+</svg>

@@ -1,0 +1,5 @@
+{
+  "test_prompt": "You are triaging email in InboxWorld.\nScenario: Live Judge Testing\nUser role: manager\nEmail: {'subject': 'come fast', 'body': 'we are late for meeting, come fast'}\nReturn a compact JSON object with keys priority, action_type, deadline_hours.\n",
+  "model_output": "{\"1999999999999999999999999999999999999999999999999",
+  "model_name": "Qwen/Qwen1.5-0.5B"
+}

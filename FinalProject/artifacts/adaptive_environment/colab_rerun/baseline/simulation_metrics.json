@@ -1,0 +1,3446 @@
+{
+  "aggregate": {
+    "episodes": 8,
+    "average_reward": -85.5,
+    "success_rate": 0.06,
+    "error_rate": 0.94,
+    "missed_deadlines": 56,
+    "escalation_count": 0,
+    "reward_history": [
+      -81.0,
+      -90.0,
+      -81.0,
+      -90.0,
+      -81.0,
+      -90.0,
+      -81.0,
+      -90.0
+    ]
+  },
+  "episodes": [
+    {
+      "config_id": "founder_launch_dynamic",
+      "total_reward": -81.0,
+      "steps": 7,
+      "success_rate": 0.0,
+      "error_rate": 1.0,
+      "mistakes": 7,
+      "missed_deadlines": 7,
+      "escalation_threads": 0,
+      "history": [
+        {
+          "time_step": 1,
+          "action": {
+            "email_id": "dyn-1",
+            "action_type": "classify_email",
+            "predicted_priority": "high",
+            "predicted_urgency": true,
+            "reply_tone": "neutral",
+            "response_text": "",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {}
+          },
+          "reward": -3.0,
+          "metrics": {
+            "priority_correctness": 1.0,
+            "response_quality": 0.0,
+            "critical_handled": 0.0,
+            "tone_match": 0.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 1.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 1.0,
+            "efficiency_bonus": 0.0,
+            "delayed_success": 0.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 0.0,
+            "delayed_satisfaction_bonus": 0.0
+          },
+          "outcome": {
+            "email_id": "dyn-1",
+            "handled_correctly": true,
+            "resolved": false,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": true,
+            "new_email_ids": [],
+            "escalation_thread_created": false,
+            "satisfaction_delta": 0,
+            "notes": [
+              "Email classified for later batching.",
+              "A previously unresolved email crossed its deadline."
+            ]
+          },
+          "delayed_events": []
+        },
+        {
+          "time_step": 2,
+          "action": {
+            "email_id": "dyn-1",
+            "action_type": "classify_email",
+            "predicted_priority": "high",
+            "predicted_urgency": true,
+            "reply_tone": "neutral",
+            "response_text": "",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {}
+          },
+          "reward": -13.0,
+          "metrics": {
+            "priority_correctness": 1.0,
+            "response_quality": 0.0,
+            "critical_handled": 0.0,
+            "tone_match": 0.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 1.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 1.0,
+            "efficiency_bonus": 0.0,
+            "delayed_success": 0.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 1.0,
+            "delayed_satisfaction_bonus": 0.0
+          },
+          "outcome": {
+            "email_id": "dyn-1",
+            "handled_correctly": true,
+            "resolved": false,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": true,
+            "new_email_ids": [
+              "dyn-4"
+            ],
+            "escalation_thread_created": false,
+            "satisfaction_delta": 0,
+            "notes": [
+              "Email classified for later batching.",
+              "A previously unresolved email crossed its deadline.",
+              "New emails arrived after the action."
+            ]
+          },
+          "delayed_events": [
+            {
+              "email_id": "dyn-1",
+              "scheduled_step": 2,
+              "reward": -10.0,
+              "caused_follow_up": false,
+              "caused_escalation_thread": false
+            }
+          ]
+        },
+        {
+          "time_step": 3,
+          "action": {
+            "email_id": "dyn-1",
+            "action_type": "classify_email",
+            "predicted_priority": "high",
+            "predicted_urgency": true,
+            "reply_tone": "neutral",
+            "response_text": "",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {}
+          },
+          "reward": -13.0,
+          "metrics": {
+            "priority_correctness": 1.0,
+            "response_quality": 0.0,
+            "critical_handled": 0.0,
+            "tone_match": 0.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 1.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 1.0,
+            "efficiency_bonus": 0.0,
+            "delayed_success": 0.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 1.0,
+            "delayed_satisfaction_bonus": 0.0
+          },
+          "outcome": {
+            "email_id": "dyn-1",
+            "handled_correctly": true,
+            "resolved": false,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": true,
+            "new_email_ids": [],
+            "escalation_thread_created": false,
+            "satisfaction_delta": -2,
+            "notes": [
+              "Email classified for later batching.",
+              "A previously unresolved email crossed its deadline."
+            ]
+          },
+          "delayed_events": [
+            {
+              "email_id": "dyn-1",
+              "scheduled_step": 3,
+              "reward": -10.0,
+              "caused_follow_up": false,
+              "caused_escalation_thread": false
+            }
+          ]
+        },
+        {
+          "time_step": 4,
+          "action": {
+            "email_id": "dyn-1",
+            "action_type": "classify_email",
+            "predicted_priority": "high",
+            "predicted_urgency": true,
+            "reply_tone": "neutral",
+            "response_text": "",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {}
+          },
+          "reward": -13.0,
+          "metrics": {
+            "priority_correctness": 1.0,
+            "response_quality": 0.0,
+            "critical_handled": 0.0,
+            "tone_match": 0.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 1.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 1.0,
+            "efficiency_bonus": 0.0,
+            "delayed_success": 0.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 1.0,
+            "delayed_satisfaction_bonus": 0.0
+          },
+          "outcome": {
+            "email_id": "dyn-1",
+            "handled_correctly": true,
+            "resolved": false,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": true,
+            "new_email_ids": [
+              "dyn-5"
+            ],
+            "escalation_thread_created": false,
+            "satisfaction_delta": -4,
+            "notes": [
+              "Email classified for later batching.",
+              "A previously unresolved email crossed its deadline.",
+              "New emails arrived after the action."
+            ]
+          },
+          "delayed_events": [
+            {
+              "email_id": "dyn-1",
+              "scheduled_step": 4,
+              "reward": -10.0,
+              "caused_follow_up": false,
+              "caused_escalation_thread": false
+            }
+          ]
+        },
+        {
+          "time_step": 5,
+          "action": {
+            "email_id": "dyn-1",
+            "action_type": "classify_email",
+            "predicted_priority": "high",
+            "predicted_urgency": true,
+            "reply_tone": "neutral",
+            "response_text": "",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {}
+          },
+          "reward": -13.0,
+          "metrics": {
+            "priority_correctness": 1.0,
+            "response_quality": 0.0,
+            "critical_handled": 0.0,
+            "tone_match": 0.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 1.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 1.0,
+            "efficiency_bonus": 0.0,
+            "delayed_success": 0.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 1.0,
+            "delayed_satisfaction_bonus": 0.0
+          },
+          "outcome": {
+            "email_id": "dyn-1",
+            "handled_correctly": true,
+            "resolved": false,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": true,
+            "new_email_ids": [],
+            "escalation_thread_created": false,
+            "satisfaction_delta": -6,
+            "notes": [
+              "Email classified for later batching.",
+              "A previously unresolved email crossed its deadline."
+            ]
+          },
+          "delayed_events": [
+            {
+              "email_id": "dyn-1",
+              "scheduled_step": 5,
+              "reward": -10.0,
+              "caused_follow_up": false,
+              "caused_escalation_thread": false
+            }
+          ]
+        },
+        {
+          "time_step": 6,
+          "action": {
+            "email_id": "dyn-1",
+            "action_type": "classify_email",
+            "predicted_priority": "high",
+            "predicted_urgency": true,
+            "reply_tone": "neutral",
+            "response_text": "",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {}
+          },
+          "reward": -13.0,
+          "metrics": {
+            "priority_correctness": 1.0,
+            "response_quality": 0.0,
+            "critical_handled": 0.0,
+            "tone_match": 0.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 1.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 1.0,
+            "efficiency_bonus": 0.0,
+            "delayed_success": 0.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 1.0,
+            "delayed_satisfaction_bonus": 0.0
+          },
+          "outcome": {
+            "email_id": "dyn-1",
+            "handled_correctly": true,
+            "resolved": false,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": true,
+            "new_email_ids": [],
+            "escalation_thread_created": false,
+            "satisfaction_delta": -8,
+            "notes": [
+              "Email classified for later batching.",
+              "A previously unresolved email crossed its deadline."
+            ]
+          },
+          "delayed_events": [
+            {
+              "email_id": "dyn-1",
+              "scheduled_step": 6,
+              "reward": -10.0,
+              "caused_follow_up": false,
+              "caused_escalation_thread": false
+            }
+          ]
+        },
+        {
+          "time_step": 7,
+          "action": {
+            "email_id": "dyn-1",
+            "action_type": "classify_email",
+            "predicted_priority": "high",
+            "predicted_urgency": true,
+            "reply_tone": "neutral",
+            "response_text": "",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {}
+          },
+          "reward": -13.0,
+          "metrics": {
+            "priority_correctness": 1.0,
+            "response_quality": 0.0,
+            "critical_handled": 0.0,
+            "tone_match": 0.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 1.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 1.0,
+            "efficiency_bonus": 0.0,
+            "delayed_success": 0.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 1.0,
+            "delayed_satisfaction_bonus": 0.0
+          },
+          "outcome": {
+            "email_id": "dyn-1",
+            "handled_correctly": true,
+            "resolved": false,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": true,
+            "new_email_ids": [
+              "random-7-personal"
+            ],
+            "escalation_thread_created": false,
+            "satisfaction_delta": -10,
+            "notes": [
+              "Email classified for later batching.",
+              "A previously unresolved email crossed its deadline.",
+              "New emails arrived after the action."
+            ]
+          },
+          "delayed_events": [
+            {
+              "email_id": "dyn-1",
+              "scheduled_step": 7,
+              "reward": -10.0,
+              "caused_follow_up": false,
+              "caused_escalation_thread": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "config_id": "ops_fire_drill_dynamic",
+      "total_reward": -90.0,
+      "steps": 8,
+      "success_rate": 0.12,
+      "error_rate": 0.88,
+      "mistakes": 7,
+      "missed_deadlines": 7,
+      "escalation_threads": 0,
+      "history": [
+        {
+          "time_step": 1,
+          "action": {
+            "email_id": "dyn-10",
+            "action_type": "classify_email",
+            "predicted_priority": "high",
+            "predicted_urgency": true,
+            "reply_tone": "neutral",
+            "response_text": "",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {}
+          },
+          "reward": 1.0,
+          "metrics": {
+            "priority_correctness": 1.0,
+            "response_quality": 0.0,
+            "critical_handled": 0.0,
+            "tone_match": 0.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 1.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 0.0,
+            "efficiency_bonus": 0.0,
+            "delayed_success": 0.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 0.0,
+            "delayed_satisfaction_bonus": 0.0
+          },
+          "outcome": {
+            "email_id": "dyn-10",
+            "handled_correctly": true,
+            "resolved": false,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": false,
+            "new_email_ids": [],
+            "escalation_thread_created": false,
+            "satisfaction_delta": 0,
+            "notes": [
+              "Email classified for later batching."
+            ]
+          },
+          "delayed_events": []
+        },
+        {
+          "time_step": 2,
+          "action": {
+            "email_id": "dyn-10",
+            "action_type": "classify_email",
+            "predicted_priority": "high",
+            "predicted_urgency": true,
+            "reply_tone": "neutral",
+            "response_text": "",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {}
+          },
+          "reward": -13.0,
+          "metrics": {
+            "priority_correctness": 1.0,
+            "response_quality": 0.0,
+            "critical_handled": 0.0,
+            "tone_match": 0.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 1.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 1.0,
+            "efficiency_bonus": 0.0,
+            "delayed_success": 0.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 1.0,
+            "delayed_satisfaction_bonus": 0.0
+          },
+          "outcome": {
+            "email_id": "dyn-10",
+            "handled_correctly": true,
+            "resolved": false,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": true,
+            "new_email_ids": [
+              "dyn-12"
+            ],
+            "escalation_thread_created": false,
+            "satisfaction_delta": 0,
+            "notes": [
+              "Email classified for later batching.",
+              "A previously unresolved email crossed its deadline.",
+              "New emails arrived after the action."
+            ]
+          },
+          "delayed_events": [
+            {
+              "email_id": "dyn-10",
+              "scheduled_step": 2,
+              "reward": -10.0,
+              "caused_follow_up": false,
+              "caused_escalation_thread": false
+            }
+          ]
+        },
+        {
+          "time_step": 3,
+          "action": {
+            "email_id": "dyn-10",
+            "action_type": "classify_email",
+            "predicted_priority": "high",
+            "predicted_urgency": true,
+            "reply_tone": "neutral",
+            "response_text": "",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {}
+          },
+          "reward": -13.0,
+          "metrics": {
+            "priority_correctness": 1.0,
+            "response_quality": 0.0,
+            "critical_handled": 0.0,
+            "tone_match": 0.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 1.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 1.0,
+            "efficiency_bonus": 0.0,
+            "delayed_success": 0.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 1.0,
+            "delayed_satisfaction_bonus": 0.0
+          },
+          "outcome": {
+            "email_id": "dyn-10",
+            "handled_correctly": true,
+            "resolved": false,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": true,
+            "new_email_ids": [],
+            "escalation_thread_created": false,
+            "satisfaction_delta": -2,
+            "notes": [
+              "Email classified for later batching.",
+              "A previously unresolved email crossed its deadline."
+            ]
+          },
+          "delayed_events": [
+            {
+              "email_id": "dyn-10",
+              "scheduled_step": 3,
+              "reward": -10.0,
+              "caused_follow_up": false,
+              "caused_escalation_thread": false
+            }
+          ]
+        },
+        {
+          "time_step": 4,
+          "action": {
+            "email_id": "dyn-10",
+            "action_type": "classify_email",
+            "predicted_priority": "high",
+            "predicted_urgency": true,
+            "reply_tone": "neutral",
+            "response_text": "",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {}
+          },
+          "reward": -13.0,
+          "metrics": {
+            "priority_correctness": 1.0,
+            "response_quality": 0.0,
+            "critical_handled": 0.0,
+            "tone_match": 0.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 1.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 1.0,
+            "efficiency_bonus": 0.0,
+            "delayed_success": 0.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 1.0,
+            "delayed_satisfaction_bonus": 0.0
+          },
+          "outcome": {
+            "email_id": "dyn-10",
+            "handled_correctly": true,
+            "resolved": false,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": true,
+            "new_email_ids": [
+              "dyn-13"
+            ],
+            "escalation_thread_created": false,
+            "satisfaction_delta": -4,
+            "notes": [
+              "Email classified for later batching.",
+              "A previously unresolved email crossed its deadline.",
+              "New emails arrived after the action."
+            ]
+          },
+          "delayed_events": [
+            {
+              "email_id": "dyn-10",
+              "scheduled_step": 4,
+              "reward": -10.0,
+              "caused_follow_up": false,
+              "caused_escalation_thread": false
+            }
+          ]
+        },
+        {
+          "time_step": 5,
+          "action": {
+            "email_id": "dyn-10",
+            "action_type": "classify_email",
+            "predicted_priority": "high",
+            "predicted_urgency": true,
+            "reply_tone": "neutral",
+            "response_text": "",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {}
+          },
+          "reward": -13.0,
+          "metrics": {
+            "priority_correctness": 1.0,
+            "response_quality": 0.0,
+            "critical_handled": 0.0,
+            "tone_match": 0.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 1.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 1.0,
+            "efficiency_bonus": 0.0,
+            "delayed_success": 0.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 1.0,
+            "delayed_satisfaction_bonus": 0.0
+          },
+          "outcome": {
+            "email_id": "dyn-10",
+            "handled_correctly": true,
+            "resolved": false,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": true,
+            "new_email_ids": [
+              "random-5-personal"
+            ],
+            "escalation_thread_created": false,
+            "satisfaction_delta": -6,
+            "notes": [
+              "Email classified for later batching.",
+              "A previously unresolved email crossed its deadline.",
+              "New emails arrived after the action."
+            ]
+          },
+          "delayed_events": [
+            {
+              "email_id": "dyn-10",
+              "scheduled_step": 5,
+              "reward": -10.0,
+              "caused_follow_up": false,
+              "caused_escalation_thread": false
+            }
+          ]
+        },
+        {
+          "time_step": 6,
+          "action": {
+            "email_id": "dyn-10",
+            "action_type": "classify_email",
+            "predicted_priority": "high",
+            "predicted_urgency": true,
+            "reply_tone": "neutral",
+            "response_text": "",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {}
+          },
+          "reward": -13.0,
+          "metrics": {
+            "priority_correctness": 1.0,
+            "response_quality": 0.0,
+            "critical_handled": 0.0,
+            "tone_match": 0.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 1.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 1.0,
+            "efficiency_bonus": 0.0,
+            "delayed_success": 0.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 1.0,
+            "delayed_satisfaction_bonus": 0.0
+          },
+          "outcome": {
+            "email_id": "dyn-10",
+            "handled_correctly": true,
+            "resolved": false,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": true,
+            "new_email_ids": [
+              "random-6-boss"
+            ],
+            "escalation_thread_created": false,
+            "satisfaction_delta": -8,
+            "notes": [
+              "Email classified for later batching.",
+              "A previously unresolved email crossed its deadline.",
+              "New emails arrived after the action."
+            ]
+          },
+          "delayed_events": [
+            {
+              "email_id": "dyn-10",
+              "scheduled_step": 6,
+              "reward": -10.0,
+              "caused_follow_up": false,
+              "caused_escalation_thread": false
+            }
+          ]
+        },
+        {
+          "time_step": 7,
+          "action": {
+            "email_id": "dyn-10",
+            "action_type": "classify_email",
+            "predicted_priority": "high",
+            "predicted_urgency": true,
+            "reply_tone": "neutral",
+            "response_text": "",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {}
+          },
+          "reward": -13.0,
+          "metrics": {
+            "priority_correctness": 1.0,
+            "response_quality": 0.0,
+            "critical_handled": 0.0,
+            "tone_match": 0.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 1.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 1.0,
+            "efficiency_bonus": 0.0,
+            "delayed_success": 0.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 1.0,
+            "delayed_satisfaction_bonus": 0.0
+          },
+          "outcome": {
+            "email_id": "dyn-10",
+            "handled_correctly": true,
+            "resolved": false,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": true,
+            "new_email_ids": [],
+            "escalation_thread_created": false,
+            "satisfaction_delta": -10,
+            "notes": [
+              "Email classified for later batching.",
+              "A previously unresolved email crossed its deadline."
+            ]
+          },
+          "delayed_events": [
+            {
+              "email_id": "dyn-10",
+              "scheduled_step": 7,
+              "reward": -10.0,
+              "caused_follow_up": false,
+              "caused_escalation_thread": false
+            }
+          ]
+        },
+        {
+          "time_step": 8,
+          "action": {
+            "email_id": "dyn-10",
+            "action_type": "classify_email",
+            "predicted_priority": "high",
+            "predicted_urgency": true,
+            "reply_tone": "neutral",
+            "response_text": "",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {}
+          },
+          "reward": -13.0,
+          "metrics": {
+            "priority_correctness": 1.0,
+            "response_quality": 0.0,
+            "critical_handled": 0.0,
+            "tone_match": 0.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 1.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 1.0,
+            "efficiency_bonus": 0.0,
+            "delayed_success": 0.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 1.0,
+            "delayed_satisfaction_bonus": 0.0
+          },
+          "outcome": {
+            "email_id": "dyn-10",
+            "handled_correctly": true,
+            "resolved": false,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": true,
+            "new_email_ids": [
+              "random-8-client"
+            ],
+            "escalation_thread_created": false,
+            "satisfaction_delta": -12,
+            "notes": [
+              "Email classified for later batching.",
+              "A previously unresolved email crossed its deadline.",
+              "New emails arrived after the action."
+            ]
+          },
+          "delayed_events": [
+            {
+              "email_id": "dyn-10",
+              "scheduled_step": 8,
+              "reward": -10.0,
+              "caused_follow_up": false,
+              "caused_escalation_thread": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "config_id": "founder_launch_dynamic",
+      "total_reward": -81.0,
+      "steps": 7,
+      "success_rate": 0.0,
+      "error_rate": 1.0,
+      "mistakes": 7,
+      "missed_deadlines": 7,
+      "escalation_threads": 0,
+      "history": [
+        {
+          "time_step": 1,
+          "action": {
+            "email_id": "dyn-1",
+            "action_type": "classify_email",
+            "predicted_priority": "high",
+            "predicted_urgency": true,
+            "reply_tone": "neutral",
+            "response_text": "",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {}
+          },
+          "reward": -3.0,
+          "metrics": {
+            "priority_correctness": 1.0,
+            "response_quality": 0.0,
+            "critical_handled": 0.0,
+            "tone_match": 0.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 1.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 1.0,
+            "efficiency_bonus": 0.0,
+            "delayed_success": 0.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 0.0,
+            "delayed_satisfaction_bonus": 0.0
+          },
+          "outcome": {
+            "email_id": "dyn-1",
+            "handled_correctly": true,
+            "resolved": false,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": true,
+            "new_email_ids": [],
+            "escalation_thread_created": false,
+            "satisfaction_delta": 0,
+            "notes": [
+              "Email classified for later batching.",
+              "A previously unresolved email crossed its deadline."
+            ]
+          },
+          "delayed_events": []
+        },
+        {
+          "time_step": 2,
+          "action": {
+            "email_id": "dyn-1",
+            "action_type": "classify_email",
+            "predicted_priority": "high",
+            "predicted_urgency": true,
+            "reply_tone": "neutral",
+            "response_text": "",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {}
+          },
+          "reward": -13.0,
+          "metrics": {
+            "priority_correctness": 1.0,
+            "response_quality": 0.0,
+            "critical_handled": 0.0,
+            "tone_match": 0.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 1.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 1.0,
+            "efficiency_bonus": 0.0,
+            "delayed_success": 0.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 1.0,
+            "delayed_satisfaction_bonus": 0.0
+          },
+          "outcome": {
+            "email_id": "dyn-1",
+            "handled_correctly": true,
+            "resolved": false,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": true,
+            "new_email_ids": [
+              "dyn-4"
+            ],
+            "escalation_thread_created": false,
+            "satisfaction_delta": 0,
+            "notes": [
+              "Email classified for later batching.",
+              "A previously unresolved email crossed its deadline.",
+              "New emails arrived after the action."
+            ]
+          },
+          "delayed_events": [
+            {
+              "email_id": "dyn-1",
+              "scheduled_step": 2,
+              "reward": -10.0,
+              "caused_follow_up": false,
+              "caused_escalation_thread": false
+            }
+          ]
+        },
+        {
+          "time_step": 3,
+          "action": {
+            "email_id": "dyn-1",
+            "action_type": "classify_email",
+            "predicted_priority": "high",
+            "predicted_urgency": true,
+            "reply_tone": "neutral",
+            "response_text": "",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {}
+          },
+          "reward": -13.0,
+          "metrics": {
+            "priority_correctness": 1.0,
+            "response_quality": 0.0,
+            "critical_handled": 0.0,
+            "tone_match": 0.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 1.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 1.0,
+            "efficiency_bonus": 0.0,
+            "delayed_success": 0.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 1.0,
+            "delayed_satisfaction_bonus": 0.0
+          },
+          "outcome": {
+            "email_id": "dyn-1",
+            "handled_correctly": true,
+            "resolved": false,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": true,
+            "new_email_ids": [],
+            "escalation_thread_created": false,
+            "satisfaction_delta": -2,
+            "notes": [
+              "Email classified for later batching.",
+              "A previously unresolved email crossed its deadline."
+            ]
+          },
+          "delayed_events": [
+            {
+              "email_id": "dyn-1",
+              "scheduled_step": 3,
+              "reward": -10.0,
+              "caused_follow_up": false,
+              "caused_escalation_thread": false
+            }
+          ]
+        },
+        {
+          "time_step": 4,
+          "action": {
+            "email_id": "dyn-1",
+            "action_type": "classify_email",
+            "predicted_priority": "high",
+            "predicted_urgency": true,
+            "reply_tone": "neutral",
+            "response_text": "",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {}
+          },
+          "reward": -13.0,
+          "metrics": {
+            "priority_correctness": 1.0,
+            "response_quality": 0.0,
+            "critical_handled": 0.0,
+            "tone_match": 0.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 1.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 1.0,
+            "efficiency_bonus": 0.0,
+            "delayed_success": 0.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 1.0,
+            "delayed_satisfaction_bonus": 0.0
+          },
+          "outcome": {
+            "email_id": "dyn-1",
+            "handled_correctly": true,
+            "resolved": false,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": true,
+            "new_email_ids": [
+              "dyn-5"
+            ],
+            "escalation_thread_created": false,
+            "satisfaction_delta": -4,
+            "notes": [
+              "Email classified for later batching.",
+              "A previously unresolved email crossed its deadline.",
+              "New emails arrived after the action."
+            ]
+          },
+          "delayed_events": [
+            {
+              "email_id": "dyn-1",
+              "scheduled_step": 4,
+              "reward": -10.0,
+              "caused_follow_up": false,
+              "caused_escalation_thread": false
+            }
+          ]
+        },
+        {
+          "time_step": 5,
+          "action": {
+            "email_id": "dyn-1",
+            "action_type": "classify_email",
+            "predicted_priority": "high",
+            "predicted_urgency": true,
+            "reply_tone": "neutral",
+            "response_text": "",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {}
+          },
+          "reward": -13.0,
+          "metrics": {
+            "priority_correctness": 1.0,
+            "response_quality": 0.0,
+            "critical_handled": 0.0,
+            "tone_match": 0.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 1.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 1.0,
+            "efficiency_bonus": 0.0,
+            "delayed_success": 0.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 1.0,
+            "delayed_satisfaction_bonus": 0.0
+          },
+          "outcome": {
+            "email_id": "dyn-1",
+            "handled_correctly": true,
+            "resolved": false,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": true,
+            "new_email_ids": [],
+            "escalation_thread_created": false,
+            "satisfaction_delta": -6,
+            "notes": [
+              "Email classified for later batching.",
+              "A previously unresolved email crossed its deadline."
+            ]
+          },
+          "delayed_events": [
+            {
+              "email_id": "dyn-1",
+              "scheduled_step": 5,
+              "reward": -10.0,
+              "caused_follow_up": false,
+              "caused_escalation_thread": false
+            }
+          ]
+        },
+        {
+          "time_step": 6,
+          "action": {
+            "email_id": "dyn-1",
+            "action_type": "classify_email",
+            "predicted_priority": "high",
+            "predicted_urgency": true,
+            "reply_tone": "neutral",
+            "response_text": "",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {}
+          },
+          "reward": -13.0,
+          "metrics": {
+            "priority_correctness": 1.0,
+            "response_quality": 0.0,
+            "critical_handled": 0.0,
+            "tone_match": 0.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 1.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 1.0,
+            "efficiency_bonus": 0.0,
+            "delayed_success": 0.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 1.0,
+            "delayed_satisfaction_bonus": 0.0
+          },
+          "outcome": {
+            "email_id": "dyn-1",
+            "handled_correctly": true,
+            "resolved": false,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": true,
+            "new_email_ids": [],
+            "escalation_thread_created": false,
+            "satisfaction_delta": -8,
+            "notes": [
+              "Email classified for later batching.",
+              "A previously unresolved email crossed its deadline."
+            ]
+          },
+          "delayed_events": [
+            {
+              "email_id": "dyn-1",
+              "scheduled_step": 6,
+              "reward": -10.0,
+              "caused_follow_up": false,
+              "caused_escalation_thread": false
+            }
+          ]
+        },
+        {
+          "time_step": 7,
+          "action": {
+            "email_id": "dyn-1",
+            "action_type": "classify_email",
+            "predicted_priority": "high",
+            "predicted_urgency": true,
+            "reply_tone": "neutral",
+            "response_text": "",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {}
+          },
+          "reward": -13.0,
+          "metrics": {
+            "priority_correctness": 1.0,
+            "response_quality": 0.0,
+            "critical_handled": 0.0,
+            "tone_match": 0.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 1.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 1.0,
+            "efficiency_bonus": 0.0,
+            "delayed_success": 0.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 1.0,
+            "delayed_satisfaction_bonus": 0.0
+          },
+          "outcome": {
+            "email_id": "dyn-1",
+            "handled_correctly": true,
+            "resolved": false,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": true,
+            "new_email_ids": [
+              "random-7-personal"
+            ],
+            "escalation_thread_created": false,
+            "satisfaction_delta": -10,
+            "notes": [
+              "Email classified for later batching.",
+              "A previously unresolved email crossed its deadline.",
+              "New emails arrived after the action."
+            ]
+          },
+          "delayed_events": [
+            {
+              "email_id": "dyn-1",
+              "scheduled_step": 7,
+              "reward": -10.0,
+              "caused_follow_up": false,
+              "caused_escalation_thread": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "config_id": "ops_fire_drill_dynamic",
+      "total_reward": -90.0,
+      "steps": 8,
+      "success_rate": 0.12,
+      "error_rate": 0.88,
+      "mistakes": 7,
+      "missed_deadlines": 7,
+      "escalation_threads": 0,
+      "history": [
+        {
+          "time_step": 1,
+          "action": {
+            "email_id": "dyn-10",
+            "action_type": "classify_email",
+            "predicted_priority": "high",
+            "predicted_urgency": true,
+            "reply_tone": "neutral",
+            "response_text": "",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {}
+          },
+          "reward": 1.0,
+          "metrics": {
+            "priority_correctness": 1.0,
+            "response_quality": 0.0,
+            "critical_handled": 0.0,
+            "tone_match": 0.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 1.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 0.0,
+            "efficiency_bonus": 0.0,
+            "delayed_success": 0.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 0.0,
+            "delayed_satisfaction_bonus": 0.0
+          },
+          "outcome": {
+            "email_id": "dyn-10",
+            "handled_correctly": true,
+            "resolved": false,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": false,
+            "new_email_ids": [],
+            "escalation_thread_created": false,
+            "satisfaction_delta": 0,
+            "notes": [
+              "Email classified for later batching."
+            ]
+          },
+          "delayed_events": []
+        },
+        {
+          "time_step": 2,
+          "action": {
+            "email_id": "dyn-10",
+            "action_type": "classify_email",
+            "predicted_priority": "high",
+            "predicted_urgency": true,
+            "reply_tone": "neutral",
+            "response_text": "",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {}
+          },
+          "reward": -13.0,
+          "metrics": {
+            "priority_correctness": 1.0,
+            "response_quality": 0.0,
+            "critical_handled": 0.0,
+            "tone_match": 0.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 1.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 1.0,
+            "efficiency_bonus": 0.0,
+            "delayed_success": 0.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 1.0,
+            "delayed_satisfaction_bonus": 0.0
+          },
+          "outcome": {
+            "email_id": "dyn-10",
+            "handled_correctly": true,
+            "resolved": false,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": true,
+            "new_email_ids": [
+              "dyn-12"
+            ],
+            "escalation_thread_created": false,
+            "satisfaction_delta": 0,
+            "notes": [
+              "Email classified for later batching.",
+              "A previously unresolved email crossed its deadline.",
+              "New emails arrived after the action."
+            ]
+          },
+          "delayed_events": [
+            {
+              "email_id": "dyn-10",
+              "scheduled_step": 2,
+              "reward": -10.0,
+              "caused_follow_up": false,
+              "caused_escalation_thread": false
+            }
+          ]
+        },
+        {
+          "time_step": 3,
+          "action": {
+            "email_id": "dyn-10",
+            "action_type": "classify_email",
+            "predicted_priority": "high",
+            "predicted_urgency": true,
+            "reply_tone": "neutral",
+            "response_text": "",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {}
+          },
+          "reward": -13.0,
+          "metrics": {
+            "priority_correctness": 1.0,
+            "response_quality": 0.0,
+            "critical_handled": 0.0,
+            "tone_match": 0.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 1.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 1.0,
+            "efficiency_bonus": 0.0,
+            "delayed_success": 0.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 1.0,
+            "delayed_satisfaction_bonus": 0.0
+          },
+          "outcome": {
+            "email_id": "dyn-10",
+            "handled_correctly": true,
+            "resolved": false,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": true,
+            "new_email_ids": [],
+            "escalation_thread_created": false,
+            "satisfaction_delta": -2,
+            "notes": [
+              "Email classified for later batching.",
+              "A previously unresolved email crossed its deadline."
+            ]
+          },
+          "delayed_events": [
+            {
+              "email_id": "dyn-10",
+              "scheduled_step": 3,
+              "reward": -10.0,
+              "caused_follow_up": false,
+              "caused_escalation_thread": false
+            }
+          ]
+        },
+        {
+          "time_step": 4,
+          "action": {
+            "email_id": "dyn-10",
+            "action_type": "classify_email",
+            "predicted_priority": "high",
+            "predicted_urgency": true,
+            "reply_tone": "neutral",
+            "response_text": "",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {}
+          },
+          "reward": -13.0,
+          "metrics": {
+            "priority_correctness": 1.0,
+            "response_quality": 0.0,
+            "critical_handled": 0.0,
+            "tone_match": 0.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 1.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 1.0,
+            "efficiency_bonus": 0.0,
+            "delayed_success": 0.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 1.0,
+            "delayed_satisfaction_bonus": 0.0
+          },
+          "outcome": {
+            "email_id": "dyn-10",
+            "handled_correctly": true,
+            "resolved": false,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": true,
+            "new_email_ids": [
+              "dyn-13"
+            ],
+            "escalation_thread_created": false,
+            "satisfaction_delta": -4,
+            "notes": [
+              "Email classified for later batching.",
+              "A previously unresolved email crossed its deadline.",
+              "New emails arrived after the action."
+            ]
+          },
+          "delayed_events": [
+            {
+              "email_id": "dyn-10",
+              "scheduled_step": 4,
+              "reward": -10.0,
+              "caused_follow_up": false,
+              "caused_escalation_thread": false
+            }
+          ]
+        },
+        {
+          "time_step": 5,
+          "action": {
+            "email_id": "dyn-10",
+            "action_type": "classify_email",
+            "predicted_priority": "high",
+            "predicted_urgency": true,
+            "reply_tone": "neutral",
+            "response_text": "",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {}
+          },
+          "reward": -13.0,
+          "metrics": {
+            "priority_correctness": 1.0,
+            "response_quality": 0.0,
+            "critical_handled": 0.0,
+            "tone_match": 0.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 1.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 1.0,
+            "efficiency_bonus": 0.0,
+            "delayed_success": 0.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 1.0,
+            "delayed_satisfaction_bonus": 0.0
+          },
+          "outcome": {
+            "email_id": "dyn-10",
+            "handled_correctly": true,
+            "resolved": false,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": true,
+            "new_email_ids": [
+              "random-5-personal"
+            ],
+            "escalation_thread_created": false,
+            "satisfaction_delta": -6,
+            "notes": [
+              "Email classified for later batching.",
+              "A previously unresolved email crossed its deadline.",
+              "New emails arrived after the action."
+            ]
+          },
+          "delayed_events": [
+            {
+              "email_id": "dyn-10",
+              "scheduled_step": 5,
+              "reward": -10.0,
+              "caused_follow_up": false,
+              "caused_escalation_thread": false
+            }
+          ]
+        },
+        {
+          "time_step": 6,
+          "action": {
+            "email_id": "dyn-10",
+            "action_type": "classify_email",
+            "predicted_priority": "high",
+            "predicted_urgency": true,
+            "reply_tone": "neutral",
+            "response_text": "",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {}
+          },
+          "reward": -13.0,
+          "metrics": {
+            "priority_correctness": 1.0,
+            "response_quality": 0.0,
+            "critical_handled": 0.0,
+            "tone_match": 0.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 1.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 1.0,
+            "efficiency_bonus": 0.0,
+            "delayed_success": 0.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 1.0,
+            "delayed_satisfaction_bonus": 0.0
+          },
+          "outcome": {
+            "email_id": "dyn-10",
+            "handled_correctly": true,
+            "resolved": false,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": true,
+            "new_email_ids": [
+              "random-6-boss"
+            ],
+            "escalation_thread_created": false,
+            "satisfaction_delta": -8,
+            "notes": [
+              "Email classified for later batching.",
+              "A previously unresolved email crossed its deadline.",
+              "New emails arrived after the action."
+            ]
+          },
+          "delayed_events": [
+            {
+              "email_id": "dyn-10",
+              "scheduled_step": 6,
+              "reward": -10.0,
+              "caused_follow_up": false,
+              "caused_escalation_thread": false
+            }
+          ]
+        },
+        {
+          "time_step": 7,
+          "action": {
+            "email_id": "dyn-10",
+            "action_type": "classify_email",
+            "predicted_priority": "high",
+            "predicted_urgency": true,
+            "reply_tone": "neutral",
+            "response_text": "",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {}
+          },
+          "reward": -13.0,
+          "metrics": {
+            "priority_correctness": 1.0,
+            "response_quality": 0.0,
+            "critical_handled": 0.0,
+            "tone_match": 0.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 1.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 1.0,
+            "efficiency_bonus": 0.0,
+            "delayed_success": 0.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 1.0,
+            "delayed_satisfaction_bonus": 0.0
+          },
+          "outcome": {
+            "email_id": "dyn-10",
+            "handled_correctly": true,
+            "resolved": false,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": true,
+            "new_email_ids": [],
+            "escalation_thread_created": false,
+            "satisfaction_delta": -10,
+            "notes": [
+              "Email classified for later batching.",
+              "A previously unresolved email crossed its deadline."
+            ]
+          },
+          "delayed_events": [
+            {
+              "email_id": "dyn-10",
+              "scheduled_step": 7,
+              "reward": -10.0,
+              "caused_follow_up": false,
+              "caused_escalation_thread": false
+            }
+          ]
+        },
+        {
+          "time_step": 8,
+          "action": {
+            "email_id": "dyn-10",
+            "action_type": "classify_email",
+            "predicted_priority": "high",
+            "predicted_urgency": true,
+            "reply_tone": "neutral",
+            "response_text": "",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {}
+          },
+          "reward": -13.0,
+          "metrics": {
+            "priority_correctness": 1.0,
+            "response_quality": 0.0,
+            "critical_handled": 0.0,
+            "tone_match": 0.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 1.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 1.0,
+            "efficiency_bonus": 0.0,
+            "delayed_success": 0.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 1.0,
+            "delayed_satisfaction_bonus": 0.0
+          },
+          "outcome": {
+            "email_id": "dyn-10",
+            "handled_correctly": true,
+            "resolved": false,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": true,
+            "new_email_ids": [
+              "random-8-client"
+            ],
+            "escalation_thread_created": false,
+            "satisfaction_delta": -12,
+            "notes": [
+              "Email classified for later batching.",
+              "A previously unresolved email crossed its deadline.",
+              "New emails arrived after the action."
+            ]
+          },
+          "delayed_events": [
+            {
+              "email_id": "dyn-10",
+              "scheduled_step": 8,
+              "reward": -10.0,
+              "caused_follow_up": false,
+              "caused_escalation_thread": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "config_id": "founder_launch_dynamic",
+      "total_reward": -81.0,
+      "steps": 7,
+      "success_rate": 0.0,
+      "error_rate": 1.0,
+      "mistakes": 7,
+      "missed_deadlines": 7,
+      "escalation_threads": 0,
+      "history": [
+        {
+          "time_step": 1,
+          "action": {
+            "email_id": "dyn-1",
+            "action_type": "classify_email",
+            "predicted_priority": "high",
+            "predicted_urgency": true,
+            "reply_tone": "neutral",
+            "response_text": "",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {}
+          },
+          "reward": -3.0,
+          "metrics": {
+            "priority_correctness": 1.0,
+            "response_quality": 0.0,
+            "critical_handled": 0.0,
+            "tone_match": 0.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 1.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 1.0,
+            "efficiency_bonus": 0.0,
+            "delayed_success": 0.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 0.0,
+            "delayed_satisfaction_bonus": 0.0
+          },
+          "outcome": {
+            "email_id": "dyn-1",
+            "handled_correctly": true,
+            "resolved": false,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": true,
+            "new_email_ids": [],
+            "escalation_thread_created": false,
+            "satisfaction_delta": 0,
+            "notes": [
+              "Email classified for later batching.",
+              "A previously unresolved email crossed its deadline."
+            ]
+          },
+          "delayed_events": []
+        },
+        {
+          "time_step": 2,
+          "action": {
+            "email_id": "dyn-1",
+            "action_type": "classify_email",
+            "predicted_priority": "high",
+            "predicted_urgency": true,
+            "reply_tone": "neutral",
+            "response_text": "",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {}
+          },
+          "reward": -13.0,
+          "metrics": {
+            "priority_correctness": 1.0,
+            "response_quality": 0.0,
+            "critical_handled": 0.0,
+            "tone_match": 0.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 1.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 1.0,
+            "efficiency_bonus": 0.0,
+            "delayed_success": 0.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 1.0,
+            "delayed_satisfaction_bonus": 0.0
+          },
+          "outcome": {
+            "email_id": "dyn-1",
+            "handled_correctly": true,
+            "resolved": false,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": true,
+            "new_email_ids": [
+              "dyn-4"
+            ],
+            "escalation_thread_created": false,
+            "satisfaction_delta": 0,
+            "notes": [
+              "Email classified for later batching.",
+              "A previously unresolved email crossed its deadline.",
+              "New emails arrived after the action."
+            ]
+          },
+          "delayed_events": [
+            {
+              "email_id": "dyn-1",
+              "scheduled_step": 2,
+              "reward": -10.0,
+              "caused_follow_up": false,
+              "caused_escalation_thread": false
+            }
+          ]
+        },
+        {
+          "time_step": 3,
+          "action": {
+            "email_id": "dyn-1",
+            "action_type": "classify_email",
+            "predicted_priority": "high",
+            "predicted_urgency": true,
+            "reply_tone": "neutral",
+            "response_text": "",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {}
+          },
+          "reward": -13.0,
+          "metrics": {
+            "priority_correctness": 1.0,
+            "response_quality": 0.0,
+            "critical_handled": 0.0,
+            "tone_match": 0.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 1.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 1.0,
+            "efficiency_bonus": 0.0,
+            "delayed_success": 0.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 1.0,
+            "delayed_satisfaction_bonus": 0.0
+          },
+          "outcome": {
+            "email_id": "dyn-1",
+            "handled_correctly": true,
+            "resolved": false,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": true,
+            "new_email_ids": [],
+            "escalation_thread_created": false,
+            "satisfaction_delta": -2,
+            "notes": [
+              "Email classified for later batching.",
+              "A previously unresolved email crossed its deadline."
+            ]
+          },
+          "delayed_events": [
+            {
+              "email_id": "dyn-1",
+              "scheduled_step": 3,
+              "reward": -10.0,
+              "caused_follow_up": false,
+              "caused_escalation_thread": false
+            }
+          ]
+        },
+        {
+          "time_step": 4,
+          "action": {
+            "email_id": "dyn-1",
+            "action_type": "classify_email",
+            "predicted_priority": "high",
+            "predicted_urgency": true,
+            "reply_tone": "neutral",
+            "response_text": "",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {}
+          },
+          "reward": -13.0,
+          "metrics": {
+            "priority_correctness": 1.0,
+            "response_quality": 0.0,
+            "critical_handled": 0.0,
+            "tone_match": 0.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 1.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 1.0,
+            "efficiency_bonus": 0.0,
+            "delayed_success": 0.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 1.0,
+            "delayed_satisfaction_bonus": 0.0
+          },
+          "outcome": {
+            "email_id": "dyn-1",
+            "handled_correctly": true,
+            "resolved": false,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": true,
+            "new_email_ids": [
+              "dyn-5"
+            ],
+            "escalation_thread_created": false,
+            "satisfaction_delta": -4,
+            "notes": [
+              "Email classified for later batching.",
+              "A previously unresolved email crossed its deadline.",
+              "New emails arrived after the action."
+            ]
+          },
+          "delayed_events": [
+            {
+              "email_id": "dyn-1",
+              "scheduled_step": 4,
+              "reward": -10.0,
+              "caused_follow_up": false,
+              "caused_escalation_thread": false
+            }
+          ]
+        },
+        {
+          "time_step": 5,
+          "action": {
+            "email_id": "dyn-1",
+            "action_type": "classify_email",
+            "predicted_priority": "high",
+            "predicted_urgency": true,
+            "reply_tone": "neutral",
+            "response_text": "",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {}
+          },
+          "reward": -13.0,
+          "metrics": {
+            "priority_correctness": 1.0,
+            "response_quality": 0.0,
+            "critical_handled": 0.0,
+            "tone_match": 0.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 1.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 1.0,
+            "efficiency_bonus": 0.0,
+            "delayed_success": 0.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 1.0,
+            "delayed_satisfaction_bonus": 0.0
+          },
+          "outcome": {
+            "email_id": "dyn-1",
+            "handled_correctly": true,
+            "resolved": false,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": true,
+            "new_email_ids": [],
+            "escalation_thread_created": false,
+            "satisfaction_delta": -6,
+            "notes": [
+              "Email classified for later batching.",
+              "A previously unresolved email crossed its deadline."
+            ]
+          },
+          "delayed_events": [
+            {
+              "email_id": "dyn-1",
+              "scheduled_step": 5,
+              "reward": -10.0,
+              "caused_follow_up": false,
+              "caused_escalation_thread": false
+            }
+          ]
+        },
+        {
+          "time_step": 6,
+          "action": {
+            "email_id": "dyn-1",
+            "action_type": "classify_email",
+            "predicted_priority": "high",
+            "predicted_urgency": true,
+            "reply_tone": "neutral",
+            "response_text": "",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {}
+          },
+          "reward": -13.0,
+          "metrics": {
+            "priority_correctness": 1.0,
+            "response_quality": 0.0,
+            "critical_handled": 0.0,
+            "tone_match": 0.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 1.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 1.0,
+            "efficiency_bonus": 0.0,
+            "delayed_success": 0.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 1.0,
+            "delayed_satisfaction_bonus": 0.0
+          },
+          "outcome": {
+            "email_id": "dyn-1",
+            "handled_correctly": true,
+            "resolved": false,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": true,
+            "new_email_ids": [],
+            "escalation_thread_created": false,
+            "satisfaction_delta": -8,
+            "notes": [
+              "Email classified for later batching.",
+              "A previously unresolved email crossed its deadline."
+            ]
+          },
+          "delayed_events": [
+            {
+              "email_id": "dyn-1",
+              "scheduled_step": 6,
+              "reward": -10.0,
+              "caused_follow_up": false,
+              "caused_escalation_thread": false
+            }
+          ]
+        },
+        {
+          "time_step": 7,
+          "action": {
+            "email_id": "dyn-1",
+            "action_type": "classify_email",
+            "predicted_priority": "high",
+            "predicted_urgency": true,
+            "reply_tone": "neutral",
+            "response_text": "",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {}
+          },
+          "reward": -13.0,
+          "metrics": {
+            "priority_correctness": 1.0,
+            "response_quality": 0.0,
+            "critical_handled": 0.0,
+            "tone_match": 0.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 1.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 1.0,
+            "efficiency_bonus": 0.0,
+            "delayed_success": 0.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 1.0,
+            "delayed_satisfaction_bonus": 0.0
+          },
+          "outcome": {
+            "email_id": "dyn-1",
+            "handled_correctly": true,
+            "resolved": false,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": true,
+            "new_email_ids": [
+              "random-7-personal"
+            ],
+            "escalation_thread_created": false,
+            "satisfaction_delta": -10,
+            "notes": [
+              "Email classified for later batching.",
+              "A previously unresolved email crossed its deadline.",
+              "New emails arrived after the action."
+            ]
+          },
+          "delayed_events": [
+            {
+              "email_id": "dyn-1",
+              "scheduled_step": 7,
+              "reward": -10.0,
+              "caused_follow_up": false,
+              "caused_escalation_thread": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "config_id": "ops_fire_drill_dynamic",
+      "total_reward": -90.0,
+      "steps": 8,
+      "success_rate": 0.12,
+      "error_rate": 0.88,
+      "mistakes": 7,
+      "missed_deadlines": 7,
+      "escalation_threads": 0,
+      "history": [
+        {
+          "time_step": 1,
+          "action": {
+            "email_id": "dyn-10",
+            "action_type": "classify_email",
+            "predicted_priority": "high",
+            "predicted_urgency": true,
+            "reply_tone": "neutral",
+            "response_text": "",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {}
+          },
+          "reward": 1.0,
+          "metrics": {
+            "priority_correctness": 1.0,
+            "response_quality": 0.0,
+            "critical_handled": 0.0,
+            "tone_match": 0.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 1.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 0.0,
+            "efficiency_bonus": 0.0,
+            "delayed_success": 0.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 0.0,
+            "delayed_satisfaction_bonus": 0.0
+          },
+          "outcome": {
+            "email_id": "dyn-10",
+            "handled_correctly": true,
+            "resolved": false,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": false,
+            "new_email_ids": [],
+            "escalation_thread_created": false,
+            "satisfaction_delta": 0,
+            "notes": [
+              "Email classified for later batching."
+            ]
+          },
+          "delayed_events": []
+        },
+        {
+          "time_step": 2,
+          "action": {
+            "email_id": "dyn-10",
+            "action_type": "classify_email",
+            "predicted_priority": "high",
+            "predicted_urgency": true,
+            "reply_tone": "neutral",
+            "response_text": "",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {}
+          },
+          "reward": -13.0,
+          "metrics": {
+            "priority_correctness": 1.0,
+            "response_quality": 0.0,
+            "critical_handled": 0.0,
+            "tone_match": 0.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 1.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 1.0,
+            "efficiency_bonus": 0.0,
+            "delayed_success": 0.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 1.0,
+            "delayed_satisfaction_bonus": 0.0
+          },
+          "outcome": {
+            "email_id": "dyn-10",
+            "handled_correctly": true,
+            "resolved": false,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": true,
+            "new_email_ids": [
+              "dyn-12"
+            ],
+            "escalation_thread_created": false,
+            "satisfaction_delta": 0,
+            "notes": [
+              "Email classified for later batching.",
+              "A previously unresolved email crossed its deadline.",
+              "New emails arrived after the action."
+            ]
+          },
+          "delayed_events": [
+            {
+              "email_id": "dyn-10",
+              "scheduled_step": 2,
+              "reward": -10.0,
+              "caused_follow_up": false,
+              "caused_escalation_thread": false
+            }
+          ]
+        },
+        {
+          "time_step": 3,
+          "action": {
+            "email_id": "dyn-10",
+            "action_type": "classify_email",
+            "predicted_priority": "high",
+            "predicted_urgency": true,
+            "reply_tone": "neutral",
+            "response_text": "",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {}
+          },
+          "reward": -13.0,
+          "metrics": {
+            "priority_correctness": 1.0,
+            "response_quality": 0.0,
+            "critical_handled": 0.0,
+            "tone_match": 0.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 1.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 1.0,
+            "efficiency_bonus": 0.0,
+            "delayed_success": 0.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 1.0,
+            "delayed_satisfaction_bonus": 0.0
+          },
+          "outcome": {
+            "email_id": "dyn-10",
+            "handled_correctly": true,
+            "resolved": false,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": true,
+            "new_email_ids": [],
+            "escalation_thread_created": false,
+            "satisfaction_delta": -2,
+            "notes": [
+              "Email classified for later batching.",
+              "A previously unresolved email crossed its deadline."
+            ]
+          },
+          "delayed_events": [
+            {
+              "email_id": "dyn-10",
+              "scheduled_step": 3,
+              "reward": -10.0,
+              "caused_follow_up": false,
+              "caused_escalation_thread": false
+            }
+          ]
+        },
+        {
+          "time_step": 4,
+          "action": {
+            "email_id": "dyn-10",
+            "action_type": "classify_email",
+            "predicted_priority": "high",
+            "predicted_urgency": true,
+            "reply_tone": "neutral",
+            "response_text": "",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {}
+          },
+          "reward": -13.0,
+          "metrics": {
+            "priority_correctness": 1.0,
+            "response_quality": 0.0,
+            "critical_handled": 0.0,
+            "tone_match": 0.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 1.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 1.0,
+            "efficiency_bonus": 0.0,
+            "delayed_success": 0.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 1.0,
+            "delayed_satisfaction_bonus": 0.0
+          },
+          "outcome": {
+            "email_id": "dyn-10",
+            "handled_correctly": true,
+            "resolved": false,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": true,
+            "new_email_ids": [
+              "dyn-13"
+            ],
+            "escalation_thread_created": false,
+            "satisfaction_delta": -4,
+            "notes": [
+              "Email classified for later batching.",
+              "A previously unresolved email crossed its deadline.",
+              "New emails arrived after the action."
+            ]
+          },
+          "delayed_events": [
+            {
+              "email_id": "dyn-10",
+              "scheduled_step": 4,
+              "reward": -10.0,
+              "caused_follow_up": false,
+              "caused_escalation_thread": false
+            }
+          ]
+        },
+        {
+          "time_step": 5,
+          "action": {
+            "email_id": "dyn-10",
+            "action_type": "classify_email",
+            "predicted_priority": "high",
+            "predicted_urgency": true,
+            "reply_tone": "neutral",
+            "response_text": "",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {}
+          },
+          "reward": -13.0,
+          "metrics": {
+            "priority_correctness": 1.0,
+            "response_quality": 0.0,
+            "critical_handled": 0.0,
+            "tone_match": 0.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 1.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 1.0,
+            "efficiency_bonus": 0.0,
+            "delayed_success": 0.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 1.0,
+            "delayed_satisfaction_bonus": 0.0
+          },
+          "outcome": {
+            "email_id": "dyn-10",
+            "handled_correctly": true,
+            "resolved": false,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": true,
+            "new_email_ids": [
+              "random-5-personal"
+            ],
+            "escalation_thread_created": false,
+            "satisfaction_delta": -6,
+            "notes": [
+              "Email classified for later batching.",
+              "A previously unresolved email crossed its deadline.",
+              "New emails arrived after the action."
+            ]
+          },
+          "delayed_events": [
+            {
+              "email_id": "dyn-10",
+              "scheduled_step": 5,
+              "reward": -10.0,
+              "caused_follow_up": false,
+              "caused_escalation_thread": false
+            }
+          ]
+        },
+        {
+          "time_step": 6,
+          "action": {
+            "email_id": "dyn-10",
+            "action_type": "classify_email",
+            "predicted_priority": "high",
+            "predicted_urgency": true,
+            "reply_tone": "neutral",
+            "response_text": "",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {}
+          },
+          "reward": -13.0,
+          "metrics": {
+            "priority_correctness": 1.0,
+            "response_quality": 0.0,
+            "critical_handled": 0.0,
+            "tone_match": 0.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 1.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 1.0,
+            "efficiency_bonus": 0.0,
+            "delayed_success": 0.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 1.0,
+            "delayed_satisfaction_bonus": 0.0
+          },
+          "outcome": {
+            "email_id": "dyn-10",
+            "handled_correctly": true,
+            "resolved": false,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": true,
+            "new_email_ids": [
+              "random-6-boss"
+            ],
+            "escalation_thread_created": false,
+            "satisfaction_delta": -8,
+            "notes": [
+              "Email classified for later batching.",
+              "A previously unresolved email crossed its deadline.",
+              "New emails arrived after the action."
+            ]
+          },
+          "delayed_events": [
+            {
+              "email_id": "dyn-10",
+              "scheduled_step": 6,
+              "reward": -10.0,
+              "caused_follow_up": false,
+              "caused_escalation_thread": false
+            }
+          ]
+        },
+        {
+          "time_step": 7,
+          "action": {
+            "email_id": "dyn-10",
+            "action_type": "classify_email",
+            "predicted_priority": "high",
+            "predicted_urgency": true,
+            "reply_tone": "neutral",
+            "response_text": "",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {}
+          },
+          "reward": -13.0,
+          "metrics": {
+            "priority_correctness": 1.0,
+            "response_quality": 0.0,
+            "critical_handled": 0.0,
+            "tone_match": 0.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 1.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 1.0,
+            "efficiency_bonus": 0.0,
+            "delayed_success": 0.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 1.0,
+            "delayed_satisfaction_bonus": 0.0
+          },
+          "outcome": {
+            "email_id": "dyn-10",
+            "handled_correctly": true,
+            "resolved": false,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": true,
+            "new_email_ids": [],
+            "escalation_thread_created": false,
+            "satisfaction_delta": -10,
+            "notes": [
+              "Email classified for later batching.",
+              "A previously unresolved email crossed its deadline."
+            ]
+          },
+          "delayed_events": [
+            {
+              "email_id": "dyn-10",
+              "scheduled_step": 7,
+              "reward": -10.0,
+              "caused_follow_up": false,
+              "caused_escalation_thread": false
+            }
+          ]
+        },
+        {
+          "time_step": 8,
+          "action": {
+            "email_id": "dyn-10",
+            "action_type": "classify_email",
+            "predicted_priority": "high",
+            "predicted_urgency": true,
+            "reply_tone": "neutral",
+            "response_text": "",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {}
+          },
+          "reward": -13.0,
+          "metrics": {
+            "priority_correctness": 1.0,
+            "response_quality": 0.0,
+            "critical_handled": 0.0,
+            "tone_match": 0.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 1.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 1.0,
+            "efficiency_bonus": 0.0,
+            "delayed_success": 0.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 1.0,
+            "delayed_satisfaction_bonus": 0.0
+          },
+          "outcome": {
+            "email_id": "dyn-10",
+            "handled_correctly": true,
+            "resolved": false,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": true,
+            "new_email_ids": [
+              "random-8-client"
+            ],
+            "escalation_thread_created": false,
+            "satisfaction_delta": -12,
+            "notes": [
+              "Email classified for later batching.",
+              "A previously unresolved email crossed its deadline.",
+              "New emails arrived after the action."
+            ]
+          },
+          "delayed_events": [
+            {
+              "email_id": "dyn-10",
+              "scheduled_step": 8,
+              "reward": -10.0,
+              "caused_follow_up": false,
+              "caused_escalation_thread": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "config_id": "founder_launch_dynamic",
+      "total_reward": -81.0,
+      "steps": 7,
+      "success_rate": 0.0,
+      "error_rate": 1.0,
+      "mistakes": 7,
+      "missed_deadlines": 7,
+      "escalation_threads": 0,
+      "history": [
+        {
+          "time_step": 1,
+          "action": {
+            "email_id": "dyn-1",
+            "action_type": "classify_email",
+            "predicted_priority": "high",
+            "predicted_urgency": true,
+            "reply_tone": "neutral",
+            "response_text": "",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {}
+          },
+          "reward": -3.0,
+          "metrics": {
+            "priority_correctness": 1.0,
+            "response_quality": 0.0,
+            "critical_handled": 0.0,
+            "tone_match": 0.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 1.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 1.0,
+            "efficiency_bonus": 0.0,
+            "delayed_success": 0.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 0.0,
+            "delayed_satisfaction_bonus": 0.0
+          },
+          "outcome": {
+            "email_id": "dyn-1",
+            "handled_correctly": true,
+            "resolved": false,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": true,
+            "new_email_ids": [],
+            "escalation_thread_created": false,
+            "satisfaction_delta": 0,
+            "notes": [
+              "Email classified for later batching.",
+              "A previously unresolved email crossed its deadline."
+            ]
+          },
+          "delayed_events": []
+        },
+        {
+          "time_step": 2,
+          "action": {
+            "email_id": "dyn-1",
+            "action_type": "classify_email",
+            "predicted_priority": "high",
+            "predicted_urgency": true,
+            "reply_tone": "neutral",
+            "response_text": "",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {}
+          },
+          "reward": -13.0,
+          "metrics": {
+            "priority_correctness": 1.0,
+            "response_quality": 0.0,
+            "critical_handled": 0.0,
+            "tone_match": 0.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 1.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 1.0,
+            "efficiency_bonus": 0.0,
+            "delayed_success": 0.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 1.0,
+            "delayed_satisfaction_bonus": 0.0
+          },
+          "outcome": {
+            "email_id": "dyn-1",
+            "handled_correctly": true,
+            "resolved": false,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": true,
+            "new_email_ids": [
+              "dyn-4"
+            ],
+            "escalation_thread_created": false,
+            "satisfaction_delta": 0,
+            "notes": [
+              "Email classified for later batching.",
+              "A previously unresolved email crossed its deadline.",
+              "New emails arrived after the action."
+            ]
+          },
+          "delayed_events": [
+            {
+              "email_id": "dyn-1",
+              "scheduled_step": 2,
+              "reward": -10.0,
+              "caused_follow_up": false,
+              "caused_escalation_thread": false
+            }
+          ]
+        },
+        {
+          "time_step": 3,
+          "action": {
+            "email_id": "dyn-1",
+            "action_type": "classify_email",
+            "predicted_priority": "high",
+            "predicted_urgency": true,
+            "reply_tone": "neutral",
+            "response_text": "",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {}
+          },
+          "reward": -13.0,
+          "metrics": {
+            "priority_correctness": 1.0,
+            "response_quality": 0.0,
+            "critical_handled": 0.0,
+            "tone_match": 0.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 1.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 1.0,
+            "efficiency_bonus": 0.0,
+            "delayed_success": 0.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 1.0,
+            "delayed_satisfaction_bonus": 0.0
+          },
+          "outcome": {
+            "email_id": "dyn-1",
+            "handled_correctly": true,
+            "resolved": false,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": true,
+            "new_email_ids": [],
+            "escalation_thread_created": false,
+            "satisfaction_delta": -2,
+            "notes": [
+              "Email classified for later batching.",
+              "A previously unresolved email crossed its deadline."
+            ]
+          },
+          "delayed_events": [
+            {
+              "email_id": "dyn-1",
+              "scheduled_step": 3,
+              "reward": -10.0,
+              "caused_follow_up": false,
+              "caused_escalation_thread": false
+            }
+          ]
+        },
+        {
+          "time_step": 4,
+          "action": {
+            "email_id": "dyn-1",
+            "action_type": "classify_email",
+            "predicted_priority": "high",
+            "predicted_urgency": true,
+            "reply_tone": "neutral",
+            "response_text": "",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {}
+          },
+          "reward": -13.0,
+          "metrics": {
+            "priority_correctness": 1.0,
+            "response_quality": 0.0,
+            "critical_handled": 0.0,
+            "tone_match": 0.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 1.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 1.0,
+            "efficiency_bonus": 0.0,
+            "delayed_success": 0.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 1.0,
+            "delayed_satisfaction_bonus": 0.0
+          },
+          "outcome": {
+            "email_id": "dyn-1",
+            "handled_correctly": true,
+            "resolved": false,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": true,
+            "new_email_ids": [
+              "dyn-5"
+            ],
+            "escalation_thread_created": false,
+            "satisfaction_delta": -4,
+            "notes": [
+              "Email classified for later batching.",
+              "A previously unresolved email crossed its deadline.",
+              "New emails arrived after the action."
+            ]
+          },
+          "delayed_events": [
+            {
+              "email_id": "dyn-1",
+              "scheduled_step": 4,
+              "reward": -10.0,
+              "caused_follow_up": false,
+              "caused_escalation_thread": false
+            }
+          ]
+        },
+        {
+          "time_step": 5,
+          "action": {
+            "email_id": "dyn-1",
+            "action_type": "classify_email",
+            "predicted_priority": "high",
+            "predicted_urgency": true,
+            "reply_tone": "neutral",
+            "response_text": "",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {}
+          },
+          "reward": -13.0,
+          "metrics": {
+            "priority_correctness": 1.0,
+            "response_quality": 0.0,
+            "critical_handled": 0.0,
+            "tone_match": 0.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 1.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 1.0,
+            "efficiency_bonus": 0.0,
+            "delayed_success": 0.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 1.0,
+            "delayed_satisfaction_bonus": 0.0
+          },
+          "outcome": {
+            "email_id": "dyn-1",
+            "handled_correctly": true,
+            "resolved": false,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": true,
+            "new_email_ids": [],
+            "escalation_thread_created": false,
+            "satisfaction_delta": -6,
+            "notes": [
+              "Email classified for later batching.",
+              "A previously unresolved email crossed its deadline."
+            ]
+          },
+          "delayed_events": [
+            {
+              "email_id": "dyn-1",
+              "scheduled_step": 5,
+              "reward": -10.0,
+              "caused_follow_up": false,
+              "caused_escalation_thread": false
+            }
+          ]
+        },
+        {
+          "time_step": 6,
+          "action": {
+            "email_id": "dyn-1",
+            "action_type": "classify_email",
+            "predicted_priority": "high",
+            "predicted_urgency": true,
+            "reply_tone": "neutral",
+            "response_text": "",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {}
+          },
+          "reward": -13.0,
+          "metrics": {
+            "priority_correctness": 1.0,
+            "response_quality": 0.0,
+            "critical_handled": 0.0,
+            "tone_match": 0.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 1.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 1.0,
+            "efficiency_bonus": 0.0,
+            "delayed_success": 0.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 1.0,
+            "delayed_satisfaction_bonus": 0.0
+          },
+          "outcome": {
+            "email_id": "dyn-1",
+            "handled_correctly": true,
+            "resolved": false,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": true,
+            "new_email_ids": [],
+            "escalation_thread_created": false,
+            "satisfaction_delta": -8,
+            "notes": [
+              "Email classified for later batching.",
+              "A previously unresolved email crossed its deadline."
+            ]
+          },
+          "delayed_events": [
+            {
+              "email_id": "dyn-1",
+              "scheduled_step": 6,
+              "reward": -10.0,
+              "caused_follow_up": false,
+              "caused_escalation_thread": false
+            }
+          ]
+        },
+        {
+          "time_step": 7,
+          "action": {
+            "email_id": "dyn-1",
+            "action_type": "classify_email",
+            "predicted_priority": "high",
+            "predicted_urgency": true,
+            "reply_tone": "neutral",
+            "response_text": "",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {}
+          },
+          "reward": -13.0,
+          "metrics": {
+            "priority_correctness": 1.0,
+            "response_quality": 0.0,
+            "critical_handled": 0.0,
+            "tone_match": 0.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 1.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 1.0,
+            "efficiency_bonus": 0.0,
+            "delayed_success": 0.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 1.0,
+            "delayed_satisfaction_bonus": 0.0
+          },
+          "outcome": {
+            "email_id": "dyn-1",
+            "handled_correctly": true,
+            "resolved": false,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": true,
+            "new_email_ids": [
+              "random-7-personal"
+            ],
+            "escalation_thread_created": false,
+            "satisfaction_delta": -10,
+            "notes": [
+              "Email classified for later batching.",
+              "A previously unresolved email crossed its deadline.",
+              "New emails arrived after the action."
+            ]
+          },
+          "delayed_events": [
+            {
+              "email_id": "dyn-1",
+              "scheduled_step": 7,
+              "reward": -10.0,
+              "caused_follow_up": false,
+              "caused_escalation_thread": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "config_id": "ops_fire_drill_dynamic",
+      "total_reward": -90.0,
+      "steps": 8,
+      "success_rate": 0.12,
+      "error_rate": 0.88,
+      "mistakes": 7,
+      "missed_deadlines": 7,
+      "escalation_threads": 0,
+      "history": [
+        {
+          "time_step": 1,
+          "action": {
+            "email_id": "dyn-10",
+            "action_type": "classify_email",
+            "predicted_priority": "high",
+            "predicted_urgency": true,
+            "reply_tone": "neutral",
+            "response_text": "",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {}
+          },
+          "reward": 1.0,
+          "metrics": {
+            "priority_correctness": 1.0,
+            "response_quality": 0.0,
+            "critical_handled": 0.0,
+            "tone_match": 0.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 1.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 0.0,
+            "efficiency_bonus": 0.0,
+            "delayed_success": 0.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 0.0,
+            "delayed_satisfaction_bonus": 0.0
+          },
+          "outcome": {
+            "email_id": "dyn-10",
+            "handled_correctly": true,
+            "resolved": false,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": false,
+            "new_email_ids": [],
+            "escalation_thread_created": false,
+            "satisfaction_delta": 0,
+            "notes": [
+              "Email classified for later batching."
+            ]
+          },
+          "delayed_events": []
+        },
+        {
+          "time_step": 2,
+          "action": {
+            "email_id": "dyn-10",
+            "action_type": "classify_email",
+            "predicted_priority": "high",
+            "predicted_urgency": true,
+            "reply_tone": "neutral",
+            "response_text": "",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {}
+          },
+          "reward": -13.0,
+          "metrics": {
+            "priority_correctness": 1.0,
+            "response_quality": 0.0,
+            "critical_handled": 0.0,
+            "tone_match": 0.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 1.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 1.0,
+            "efficiency_bonus": 0.0,
+            "delayed_success": 0.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 1.0,
+            "delayed_satisfaction_bonus": 0.0
+          },
+          "outcome": {
+            "email_id": "dyn-10",
+            "handled_correctly": true,
+            "resolved": false,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": true,
+            "new_email_ids": [
+              "dyn-12"
+            ],
+            "escalation_thread_created": false,
+            "satisfaction_delta": 0,
+            "notes": [
+              "Email classified for later batching.",
+              "A previously unresolved email crossed its deadline.",
+              "New emails arrived after the action."
+            ]
+          },
+          "delayed_events": [
+            {
+              "email_id": "dyn-10",
+              "scheduled_step": 2,
+              "reward": -10.0,
+              "caused_follow_up": false,
+              "caused_escalation_thread": false
+            }
+          ]
+        },
+        {
+          "time_step": 3,
+          "action": {
+            "email_id": "dyn-10",
+            "action_type": "classify_email",
+            "predicted_priority": "high",
+            "predicted_urgency": true,
+            "reply_tone": "neutral",
+            "response_text": "",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {}
+          },
+          "reward": -13.0,
+          "metrics": {
+            "priority_correctness": 1.0,
+            "response_quality": 0.0,
+            "critical_handled": 0.0,
+            "tone_match": 0.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 1.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 1.0,
+            "efficiency_bonus": 0.0,
+            "delayed_success": 0.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 1.0,
+            "delayed_satisfaction_bonus": 0.0
+          },
+          "outcome": {
+            "email_id": "dyn-10",
+            "handled_correctly": true,
+            "resolved": false,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": true,
+            "new_email_ids": [],
+            "escalation_thread_created": false,
+            "satisfaction_delta": -2,
+            "notes": [
+              "Email classified for later batching.",
+              "A previously unresolved email crossed its deadline."
+            ]
+          },
+          "delayed_events": [
+            {
+              "email_id": "dyn-10",
+              "scheduled_step": 3,
+              "reward": -10.0,
+              "caused_follow_up": false,
+              "caused_escalation_thread": false
+            }
+          ]
+        },
+        {
+          "time_step": 4,
+          "action": {
+            "email_id": "dyn-10",
+            "action_type": "classify_email",
+            "predicted_priority": "high",
+            "predicted_urgency": true,
+            "reply_tone": "neutral",
+            "response_text": "",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {}
+          },
+          "reward": -13.0,
+          "metrics": {
+            "priority_correctness": 1.0,
+            "response_quality": 0.0,
+            "critical_handled": 0.0,
+            "tone_match": 0.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 1.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 1.0,
+            "efficiency_bonus": 0.0,
+            "delayed_success": 0.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 1.0,
+            "delayed_satisfaction_bonus": 0.0
+          },
+          "outcome": {
+            "email_id": "dyn-10",
+            "handled_correctly": true,
+            "resolved": false,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": true,
+            "new_email_ids": [
+              "dyn-13"
+            ],
+            "escalation_thread_created": false,
+            "satisfaction_delta": -4,
+            "notes": [
+              "Email classified for later batching.",
+              "A previously unresolved email crossed its deadline.",
+              "New emails arrived after the action."
+            ]
+          },
+          "delayed_events": [
+            {
+              "email_id": "dyn-10",
+              "scheduled_step": 4,
+              "reward": -10.0,
+              "caused_follow_up": false,
+              "caused_escalation_thread": false
+            }
+          ]
+        },
+        {
+          "time_step": 5,
+          "action": {
+            "email_id": "dyn-10",
+            "action_type": "classify_email",
+            "predicted_priority": "high",
+            "predicted_urgency": true,
+            "reply_tone": "neutral",
+            "response_text": "",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {}
+          },
+          "reward": -13.0,
+          "metrics": {
+            "priority_correctness": 1.0,
+            "response_quality": 0.0,
+            "critical_handled": 0.0,
+            "tone_match": 0.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 1.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 1.0,
+            "efficiency_bonus": 0.0,
+            "delayed_success": 0.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 1.0,
+            "delayed_satisfaction_bonus": 0.0
+          },
+          "outcome": {
+            "email_id": "dyn-10",
+            "handled_correctly": true,
+            "resolved": false,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": true,
+            "new_email_ids": [
+              "random-5-personal"
+            ],
+            "escalation_thread_created": false,
+            "satisfaction_delta": -6,
+            "notes": [
+              "Email classified for later batching.",
+              "A previously unresolved email crossed its deadline.",
+              "New emails arrived after the action."
+            ]
+          },
+          "delayed_events": [
+            {
+              "email_id": "dyn-10",
+              "scheduled_step": 5,
+              "reward": -10.0,
+              "caused_follow_up": false,
+              "caused_escalation_thread": false
+            }
+          ]
+        },
+        {
+          "time_step": 6,
+          "action": {
+            "email_id": "dyn-10",
+            "action_type": "classify_email",
+            "predicted_priority": "high",
+            "predicted_urgency": true,
+            "reply_tone": "neutral",
+            "response_text": "",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {}
+          },
+          "reward": -13.0,
+          "metrics": {
+            "priority_correctness": 1.0,
+            "response_quality": 0.0,
+            "critical_handled": 0.0,
+            "tone_match": 0.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 1.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 1.0,
+            "efficiency_bonus": 0.0,
+            "delayed_success": 0.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 1.0,
+            "delayed_satisfaction_bonus": 0.0
+          },
+          "outcome": {
+            "email_id": "dyn-10",
+            "handled_correctly": true,
+            "resolved": false,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": true,
+            "new_email_ids": [
+              "random-6-boss"
+            ],
+            "escalation_thread_created": false,
+            "satisfaction_delta": -8,
+            "notes": [
+              "Email classified for later batching.",
+              "A previously unresolved email crossed its deadline.",
+              "New emails arrived after the action."
+            ]
+          },
+          "delayed_events": [
+            {
+              "email_id": "dyn-10",
+              "scheduled_step": 6,
+              "reward": -10.0,
+              "caused_follow_up": false,
+              "caused_escalation_thread": false
+            }
+          ]
+        },
+        {
+          "time_step": 7,
+          "action": {
+            "email_id": "dyn-10",
+            "action_type": "classify_email",
+            "predicted_priority": "high",
+            "predicted_urgency": true,
+            "reply_tone": "neutral",
+            "response_text": "",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {}
+          },
+          "reward": -13.0,
+          "metrics": {
+            "priority_correctness": 1.0,
+            "response_quality": 0.0,
+            "critical_handled": 0.0,
+            "tone_match": 0.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 1.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 1.0,
+            "efficiency_bonus": 0.0,
+            "delayed_success": 0.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 1.0,
+            "delayed_satisfaction_bonus": 0.0
+          },
+          "outcome": {
+            "email_id": "dyn-10",
+            "handled_correctly": true,
+            "resolved": false,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": true,
+            "new_email_ids": [],
+            "escalation_thread_created": false,
+            "satisfaction_delta": -10,
+            "notes": [
+              "Email classified for later batching.",
+              "A previously unresolved email crossed its deadline."
+            ]
+          },
+          "delayed_events": [
+            {
+              "email_id": "dyn-10",
+              "scheduled_step": 7,
+              "reward": -10.0,
+              "caused_follow_up": false,
+              "caused_escalation_thread": false
+            }
+          ]
+        },
+        {
+          "time_step": 8,
+          "action": {
+            "email_id": "dyn-10",
+            "action_type": "classify_email",
+            "predicted_priority": "high",
+            "predicted_urgency": true,
+            "reply_tone": "neutral",
+            "response_text": "",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {}
+          },
+          "reward": -13.0,
+          "metrics": {
+            "priority_correctness": 1.0,
+            "response_quality": 0.0,
+            "critical_handled": 0.0,
+            "tone_match": 0.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 1.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 1.0,
+            "efficiency_bonus": 0.0,
+            "delayed_success": 0.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 1.0,
+            "delayed_satisfaction_bonus": 0.0
+          },
+          "outcome": {
+            "email_id": "dyn-10",
+            "handled_correctly": true,
+            "resolved": false,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": true,
+            "new_email_ids": [
+              "random-8-client"
+            ],
+            "escalation_thread_created": false,
+            "satisfaction_delta": -12,
+            "notes": [
+              "Email classified for later batching.",
+              "A previously unresolved email crossed its deadline.",
+              "New emails arrived after the action."
+            ]
+          },
+          "delayed_events": [
+            {
+              "email_id": "dyn-10",
+              "scheduled_step": 8,
+              "reward": -10.0,
+              "caused_follow_up": false,
+              "caused_escalation_thread": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

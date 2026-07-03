@@ -1,0 +1,73 @@
+{
+  "project": "InboxWorld",
+  "problem_statement": "Email triage environment with context-aware decisions and delayed business consequences.",
+  "theme_positioning": {
+    "primary": "Theme 3 - World Modeling",
+    "secondary": [
+      "Theme 1 - Multi-Agent Interactions",
+      "Theme 2 - Long-Horizon Planning"
+    ]
+  },
+  "environment_properties": [
+    "partial observability",
+    "visible-only agent observations",
+    "stochastic arrivals",
+    "delayed reward buffer",
+    "follow-up and escalation generation",
+    "time-step pressure"
+  ],
+  "configs": [
+    {
+      "config_id": "founder_launch_dynamic",
+      "description": "Launch-week inbox where unresolved work triggers follow-ups and new email arrivals.",
+      "initial_email_count": 3,
+      "scheduled_arrival_count": 2,
+      "max_steps": 7
+    },
+    {
+      "config_id": "ops_fire_drill_dynamic",
+      "description": "Ops inbox with revenue-risk escalation and low-value noise competing for attention.",
+      "initial_email_count": 2,
+      "scheduled_arrival_count": 2,
+      "max_steps": 8
+    }
+  ],
+  "evaluations": {
+    "baseline": {
+      "episodes": 8,
+      "average_reward": -117.5,
+      "success_rate": 0.0,
+      "error_rate": 1.0,
+      "missed_deadlines": 60,
+      "escalation_count": 0,
+      "reward_history": [
+        -81.0,
+        -154.0,
+        -81.0,
+        -154.0,
+        -81.0,
+        -154.0,
+        -81.0,
+        -154.0
+      ]
+    },
+    "multi_agent": {
+      "episodes": 8,
+      "average_reward": 102.0,
+      "success_rate": 0.94,
+      "error_rate": 0.0,
+      "missed_deadlines": 0,
+      "escalation_count": 0,
+      "reward_history": [
+        77.0,
+        127.0,
+        77.0,
+        127.0,
+        77.0,
+        127.0,
+        77.0,
+        127.0
+      ]
+    }
+  }
+}

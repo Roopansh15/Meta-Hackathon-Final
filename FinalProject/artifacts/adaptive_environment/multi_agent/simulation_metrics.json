@@ -1,0 +1,4050 @@
+{
+  "aggregate": {
+    "episodes": 8,
+    "average_reward": 102.0,
+    "success_rate": 0.94,
+    "error_rate": 0.0,
+    "missed_deadlines": 0,
+    "escalation_count": 0,
+    "reward_history": [
+      77.0,
+      127.0,
+      77.0,
+      127.0,
+      77.0,
+      127.0,
+      77.0,
+      127.0
+    ]
+  },
+  "episodes": [
+    {
+      "config_id": "founder_launch_dynamic",
+      "total_reward": 77.0,
+      "steps": 7,
+      "success_rate": 1.0,
+      "error_rate": 0.0,
+      "mistakes": 0,
+      "missed_deadlines": 0,
+      "escalation_threads": 0,
+      "history": [
+        {
+          "time_step": 1,
+          "action": {
+            "email_id": "dyn-2",
+            "action_type": "generate_reply",
+            "predicted_priority": "high",
+            "predicted_urgency": false,
+            "reply_tone": "helpful",
+            "response_text": "Hi design@studio.dev, I am looking into this right now! Let me gather the necessary details and get back to you shortly.",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {
+              "decision_trace": {
+                "email_id": "dyn-2",
+                "sender_importance": "client",
+                "visible_urgency": false,
+                "known_deadline_step": null,
+                "requires_response": true,
+                "age_steps": 0,
+                "derived_tags": [
+                  "design"
+                ]
+              }
+            }
+          },
+          "reward": 12.0,
+          "metrics": {
+            "priority_correctness": 1.0,
+            "response_quality": 1.0,
+            "critical_handled": 1.0,
+            "tone_match": 1.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 0.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 0.0,
+            "efficiency_bonus": 0.0,
+            "empty_inbox_wait": 0.0,
+            "delayed_success": 0.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 0.0,
+            "delayed_satisfaction_bonus": 0.0
+          },
+          "outcome": {
+            "email_id": "dyn-2",
+            "handled_correctly": true,
+            "resolved": true,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": false,
+            "new_email_ids": [],
+            "escalation_thread_created": false,
+            "satisfaction_delta": 2,
+            "notes": [
+              "Reply drafted and thread resolved."
+            ]
+          },
+          "delayed_events": []
+        },
+        {
+          "time_step": 2,
+          "action": {
+            "email_id": "dyn-1",
+            "action_type": "escalate_email",
+            "predicted_priority": "high",
+            "predicted_urgency": true,
+            "reply_tone": "professional",
+            "response_text": "Forwarding to management: The email from client@northstar.com requires immediate escalation to avoid negative downstream consequences. Please review.",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {
+              "decision_trace": {
+                "email_id": "dyn-1",
+                "sender_importance": "client",
+                "visible_urgency": true,
+                "known_deadline_step": 2,
+                "requires_response": true,
+                "age_steps": 1,
+                "derived_tags": [
+                  "milestone"
+                ]
+              }
+            }
+          },
+          "reward": 21.0,
+          "metrics": {
+            "priority_correctness": 1.0,
+            "response_quality": 0.0,
+            "critical_handled": 1.0,
+            "tone_match": 0.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 0.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 0.0,
+            "efficiency_bonus": 0.0,
+            "empty_inbox_wait": 0.0,
+            "delayed_success": 1.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 0.0,
+            "delayed_satisfaction_bonus": 1.0
+          },
+          "outcome": {
+            "email_id": "dyn-1",
+            "handled_correctly": true,
+            "resolved": true,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": false,
+            "new_email_ids": [
+              "dyn-4"
+            ],
+            "escalation_thread_created": false,
+            "satisfaction_delta": 1,
+            "notes": [
+              "Email escalated to manager.",
+              "New emails arrived after the action."
+            ]
+          },
+          "delayed_events": [
+            {
+              "email_id": "dyn-2",
+              "scheduled_step": 2,
+              "reward": 12.0,
+              "caused_follow_up": false,
+              "caused_escalation_thread": false
+            }
+          ]
+        },
+        {
+          "time_step": 3,
+          "action": {
+            "email_id": "dyn-4",
+            "action_type": "generate_reply",
+            "predicted_priority": "high",
+            "predicted_urgency": true,
+            "reply_tone": "professional",
+            "response_text": "Hello boss@company.ai, thank you for reaching out. We are actively reviewing this matter and will provide a formal update soon.",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {
+              "decision_trace": {
+                "email_id": "dyn-4",
+                "sender_importance": "boss",
+                "visible_urgency": false,
+                "known_deadline_step": null,
+                "requires_response": true,
+                "age_steps": 0,
+                "derived_tags": [
+                  "board"
+                ]
+              }
+            }
+          },
+          "reward": 14.0,
+          "metrics": {
+            "priority_correctness": 0.0,
+            "response_quality": 1.0,
+            "critical_handled": 0.0,
+            "tone_match": 1.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 0.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 0.0,
+            "efficiency_bonus": 0.0,
+            "empty_inbox_wait": 0.0,
+            "delayed_success": 1.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 0.0,
+            "delayed_satisfaction_bonus": 1.0
+          },
+          "outcome": {
+            "email_id": "dyn-4",
+            "handled_correctly": true,
+            "resolved": true,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": false,
+            "new_email_ids": [],
+            "escalation_thread_created": false,
+            "satisfaction_delta": 2,
+            "notes": [
+              "Reply drafted and thread resolved."
+            ]
+          },
+          "delayed_events": [
+            {
+              "email_id": "dyn-1",
+              "scheduled_step": 3,
+              "reward": 11.0,
+              "caused_follow_up": false,
+              "caused_escalation_thread": false
+            }
+          ]
+        },
+        {
+          "time_step": 4,
+          "action": {
+            "email_id": "dyn-3",
+            "action_type": "delay_email",
+            "predicted_priority": "low",
+            "predicted_urgency": false,
+            "reply_tone": "friendly",
+            "response_text": "[Internal Note] Low priority. Delayed processing for friend@alumni.org. No immediate response required.",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {
+              "decision_trace": {
+                "email_id": "dyn-3",
+                "sender_importance": "friend",
+                "visible_urgency": false,
+                "known_deadline_step": null,
+                "requires_response": true,
+                "age_steps": 3,
+                "derived_tags": []
+              }
+            }
+          },
+          "reward": 17.0,
+          "metrics": {
+            "priority_correctness": 1.0,
+            "response_quality": 0.0,
+            "critical_handled": 0.0,
+            "tone_match": 0.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 0.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 0.0,
+            "efficiency_bonus": 0.0,
+            "empty_inbox_wait": 0.0,
+            "delayed_success": 1.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 0.0,
+            "delayed_satisfaction_bonus": 1.0
+          },
+          "outcome": {
+            "email_id": "dyn-3",
+            "handled_correctly": true,
+            "resolved": false,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": false,
+            "new_email_ids": [
+              "dyn-5"
+            ],
+            "escalation_thread_created": false,
+            "satisfaction_delta": 0,
+            "notes": [
+              "Email delayed for later handling.",
+              "New emails arrived after the action."
+            ]
+          },
+          "delayed_events": [
+            {
+              "email_id": "dyn-4",
+              "scheduled_step": 4,
+              "reward": 12.0,
+              "caused_follow_up": false,
+              "caused_escalation_thread": false
+            }
+          ]
+        },
+        {
+          "time_step": 5,
+          "action": {
+            "email_id": "dyn-5",
+            "action_type": "classify_email",
+            "predicted_priority": "medium",
+            "predicted_urgency": false,
+            "reply_tone": "neutral",
+            "response_text": "[Internal Note] Archived email from unknown@opsmail.dev. No action needed.",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {
+              "decision_trace": {
+                "email_id": "dyn-5",
+                "sender_importance": "client",
+                "visible_urgency": false,
+                "known_deadline_step": null,
+                "requires_response": true,
+                "age_steps": 0,
+                "derived_tags": [
+                  "ambiguous"
+                ]
+              }
+            }
+          },
+          "reward": 11.0,
+          "metrics": {
+            "priority_correctness": 1.0,
+            "response_quality": 0.0,
+            "critical_handled": 0.0,
+            "tone_match": 0.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 1.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 0.0,
+            "efficiency_bonus": 0.0,
+            "empty_inbox_wait": 0.0,
+            "delayed_success": 1.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 0.0,
+            "delayed_satisfaction_bonus": 0.0
+          },
+          "outcome": {
+            "email_id": "dyn-5",
+            "handled_correctly": true,
+            "resolved": false,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": false,
+            "new_email_ids": [],
+            "escalation_thread_created": false,
+            "satisfaction_delta": 0,
+            "notes": [
+              "Email classified for later batching."
+            ]
+          },
+          "delayed_events": [
+            {
+              "email_id": "dyn-3",
+              "scheduled_step": 5,
+              "reward": 10.0,
+              "caused_follow_up": false,
+              "caused_escalation_thread": false
+            }
+          ]
+        },
+        {
+          "time_step": 6,
+          "action": {
+            "email_id": "dyn-5",
+            "action_type": "classify_email",
+            "predicted_priority": "medium",
+            "predicted_urgency": false,
+            "reply_tone": "neutral",
+            "response_text": "[Internal Note] Archived email from unknown@opsmail.dev. No action needed.",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {
+              "decision_trace": {
+                "email_id": "dyn-5",
+                "sender_importance": "client",
+                "visible_urgency": false,
+                "known_deadline_step": null,
+                "requires_response": true,
+                "age_steps": 1,
+                "derived_tags": [
+                  "ambiguous"
+                ]
+              }
+            }
+          },
+          "reward": 1.0,
+          "metrics": {
+            "priority_correctness": 1.0,
+            "response_quality": 0.0,
+            "critical_handled": 0.0,
+            "tone_match": 0.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 1.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 0.0,
+            "efficiency_bonus": 0.0,
+            "empty_inbox_wait": 0.0,
+            "delayed_success": 1.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 1.0,
+            "delayed_satisfaction_bonus": 0.0
+          },
+          "outcome": {
+            "email_id": "dyn-5",
+            "handled_correctly": true,
+            "resolved": false,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": false,
+            "new_email_ids": [],
+            "escalation_thread_created": false,
+            "satisfaction_delta": 0,
+            "notes": [
+              "Email classified for later batching."
+            ]
+          },
+          "delayed_events": [
+            {
+              "email_id": "dyn-5",
+              "scheduled_step": 6,
+              "reward": 0.0,
+              "caused_follow_up": false,
+              "caused_escalation_thread": false
+            }
+          ]
+        },
+        {
+          "time_step": 7,
+          "action": {
+            "email_id": "dyn-5",
+            "action_type": "classify_email",
+            "predicted_priority": "medium",
+            "predicted_urgency": false,
+            "reply_tone": "neutral",
+            "response_text": "[Internal Note] Archived email from unknown@opsmail.dev. No action needed.",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {
+              "decision_trace": {
+                "email_id": "dyn-5",
+                "sender_importance": "client",
+                "visible_urgency": false,
+                "known_deadline_step": null,
+                "requires_response": true,
+                "age_steps": 2,
+                "derived_tags": [
+                  "ambiguous"
+                ]
+              }
+            }
+          },
+          "reward": 1.0,
+          "metrics": {
+            "priority_correctness": 1.0,
+            "response_quality": 0.0,
+            "critical_handled": 0.0,
+            "tone_match": 0.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 1.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 0.0,
+            "efficiency_bonus": 0.0,
+            "empty_inbox_wait": 0.0,
+            "delayed_success": 1.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 1.0,
+            "delayed_satisfaction_bonus": 0.0
+          },
+          "outcome": {
+            "email_id": "dyn-5",
+            "handled_correctly": true,
+            "resolved": false,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": false,
+            "new_email_ids": [
+              "random-7-personal"
+            ],
+            "escalation_thread_created": false,
+            "satisfaction_delta": 0,
+            "notes": [
+              "Email classified for later batching.",
+              "New emails arrived after the action."
+            ]
+          },
+          "delayed_events": [
+            {
+              "email_id": "dyn-5",
+              "scheduled_step": 7,
+              "reward": 0.0,
+              "caused_follow_up": false,
+              "caused_escalation_thread": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "config_id": "ops_fire_drill_dynamic",
+      "total_reward": 127.0,
+      "steps": 8,
+      "success_rate": 0.88,
+      "error_rate": 0.0,
+      "mistakes": 0,
+      "missed_deadlines": 0,
+      "escalation_threads": 0,
+      "history": [
+        {
+          "time_step": 1,
+          "action": {
+            "email_id": "dyn-10",
+            "action_type": "escalate_email",
+            "predicted_priority": "high",
+            "predicted_urgency": false,
+            "reply_tone": "professional",
+            "response_text": "Forwarding to management: The email from csm@renewals.app requires immediate escalation to avoid negative downstream consequences. Please review.",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {
+              "decision_trace": {
+                "email_id": "dyn-10",
+                "sender_importance": "client",
+                "visible_urgency": false,
+                "known_deadline_step": null,
+                "requires_response": true,
+                "age_steps": 0,
+                "derived_tags": [
+                  "renewal"
+                ]
+              }
+            }
+          },
+          "reward": 9.0,
+          "metrics": {
+            "priority_correctness": 1.0,
+            "response_quality": 0.0,
+            "critical_handled": 1.0,
+            "tone_match": 0.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 0.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 0.0,
+            "efficiency_bonus": 0.0,
+            "empty_inbox_wait": 0.0,
+            "delayed_success": 0.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 0.0,
+            "delayed_satisfaction_bonus": 0.0
+          },
+          "outcome": {
+            "email_id": "dyn-10",
+            "handled_correctly": true,
+            "resolved": true,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": false,
+            "new_email_ids": [],
+            "escalation_thread_created": false,
+            "satisfaction_delta": 1,
+            "notes": [
+              "Email escalated to manager."
+            ]
+          },
+          "delayed_events": []
+        },
+        {
+          "time_step": 2,
+          "action": {
+            "email_id": "dyn-11",
+            "action_type": "ignore_email",
+            "predicted_priority": "low",
+            "predicted_urgency": false,
+            "reply_tone": "neutral",
+            "response_text": "[Internal Note] Archived email from travel@airline.com. No action needed.",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {
+              "decision_trace": {
+                "email_id": "dyn-11",
+                "sender_importance": "friend",
+                "visible_urgency": false,
+                "known_deadline_step": null,
+                "requires_response": false,
+                "age_steps": 1,
+                "derived_tags": []
+              }
+            }
+          },
+          "reward": 16.0,
+          "metrics": {
+            "priority_correctness": 1.0,
+            "response_quality": 0.0,
+            "critical_handled": 0.0,
+            "tone_match": 0.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 0.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 0.0,
+            "efficiency_bonus": 0.0,
+            "empty_inbox_wait": 0.0,
+            "delayed_success": 1.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 0.0,
+            "delayed_satisfaction_bonus": 1.0
+          },
+          "outcome": {
+            "email_id": "dyn-11",
+            "handled_correctly": true,
+            "resolved": true,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": false,
+            "new_email_ids": [
+              "dyn-12"
+            ],
+            "escalation_thread_created": false,
+            "satisfaction_delta": 0,
+            "notes": [
+              "Email ignored and removed from queue.",
+              "New emails arrived after the action."
+            ]
+          },
+          "delayed_events": [
+            {
+              "email_id": "dyn-10",
+              "scheduled_step": 2,
+              "reward": 11.0,
+              "caused_follow_up": false,
+              "caused_escalation_thread": false
+            }
+          ]
+        },
+        {
+          "time_step": 3,
+          "action": {
+            "email_id": "dyn-12",
+            "action_type": "generate_reply",
+            "predicted_priority": "high",
+            "predicted_urgency": true,
+            "reply_tone": "professional",
+            "response_text": "Hello legal@partner.org, thank you for reaching out. We are actively reviewing this matter and will provide a formal update soon.",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {
+              "decision_trace": {
+                "email_id": "dyn-12",
+                "sender_importance": "client",
+                "visible_urgency": true,
+                "known_deadline_step": 3,
+                "requires_response": true,
+                "age_steps": 0,
+                "derived_tags": [
+                  "contract"
+                ]
+              }
+            }
+          },
+          "reward": 22.0,
+          "metrics": {
+            "priority_correctness": 1.0,
+            "response_quality": 1.0,
+            "critical_handled": 1.0,
+            "tone_match": 1.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 0.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 0.0,
+            "efficiency_bonus": 0.0,
+            "empty_inbox_wait": 0.0,
+            "delayed_success": 1.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 0.0,
+            "delayed_satisfaction_bonus": 0.0
+          },
+          "outcome": {
+            "email_id": "dyn-12",
+            "handled_correctly": true,
+            "resolved": true,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": false,
+            "new_email_ids": [],
+            "escalation_thread_created": false,
+            "satisfaction_delta": 2,
+            "notes": [
+              "Reply drafted and thread resolved."
+            ]
+          },
+          "delayed_events": [
+            {
+              "email_id": "dyn-11",
+              "scheduled_step": 3,
+              "reward": 10.0,
+              "caused_follow_up": false,
+              "caused_escalation_thread": false
+            }
+          ]
+        },
+        {
+          "time_step": 4,
+          "action": {
+            "email_id": "none",
+            "action_type": "ignore_email",
+            "predicted_priority": null,
+            "predicted_urgency": null,
+            "reply_tone": null,
+            "response_text": "",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {}
+          },
+          "reward": 12.0,
+          "metrics": {
+            "priority_correctness": 0.0,
+            "response_quality": 0.0,
+            "critical_handled": 0.0,
+            "tone_match": 0.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 0.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 0.0,
+            "efficiency_bonus": 0.0,
+            "empty_inbox_wait": 1.0,
+            "delayed_success": 1.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 0.0,
+            "delayed_satisfaction_bonus": 1.0
+          },
+          "outcome": {
+            "email_id": "none",
+            "handled_correctly": false,
+            "resolved": false,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": false,
+            "new_email_ids": [
+              "dyn-13"
+            ],
+            "escalation_thread_created": false,
+            "satisfaction_delta": 0,
+            "notes": [
+              "Action referenced an unknown email.",
+              "New emails arrived after the action."
+            ]
+          },
+          "delayed_events": [
+            {
+              "email_id": "dyn-12",
+              "scheduled_step": 4,
+              "reward": 12.0,
+              "caused_follow_up": false,
+              "caused_escalation_thread": false
+            }
+          ]
+        },
+        {
+          "time_step": 5,
+          "action": {
+            "email_id": "dyn-13",
+            "action_type": "generate_reply",
+            "predicted_priority": "high",
+            "predicted_urgency": false,
+            "reply_tone": "professional",
+            "response_text": "Hello ceo@company.ai, thank you for reaching out. We are actively reviewing this matter and will provide a formal update soon.",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {
+              "decision_trace": {
+                "email_id": "dyn-13",
+                "sender_importance": "boss",
+                "visible_urgency": false,
+                "known_deadline_step": null,
+                "requires_response": true,
+                "age_steps": 0,
+                "derived_tags": [
+                  "board"
+                ]
+              }
+            }
+          },
+          "reward": 12.0,
+          "metrics": {
+            "priority_correctness": 1.0,
+            "response_quality": 1.0,
+            "critical_handled": 1.0,
+            "tone_match": 1.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 0.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 0.0,
+            "efficiency_bonus": 0.0,
+            "empty_inbox_wait": 0.0,
+            "delayed_success": 0.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 0.0,
+            "delayed_satisfaction_bonus": 0.0
+          },
+          "outcome": {
+            "email_id": "dyn-13",
+            "handled_correctly": true,
+            "resolved": true,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": false,
+            "new_email_ids": [
+              "random-5-personal"
+            ],
+            "escalation_thread_created": false,
+            "satisfaction_delta": 2,
+            "notes": [
+              "Reply drafted and thread resolved.",
+              "New emails arrived after the action."
+            ]
+          },
+          "delayed_events": []
+        },
+        {
+          "time_step": 6,
+          "action": {
+            "email_id": "random-5-personal",
+            "action_type": "delay_email",
+            "predicted_priority": "low",
+            "predicted_urgency": false,
+            "reply_tone": "friendly",
+            "response_text": "[Internal Note] Low priority. Delayed processing for family@home.net. No immediate response required.",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {
+              "decision_trace": {
+                "email_id": "random-5-personal",
+                "sender_importance": "friend",
+                "visible_urgency": false,
+                "known_deadline_step": null,
+                "requires_response": true,
+                "age_steps": 0,
+                "derived_tags": []
+              }
+            }
+          },
+          "reward": 17.0,
+          "metrics": {
+            "priority_correctness": 1.0,
+            "response_quality": 0.0,
+            "critical_handled": 0.0,
+            "tone_match": 0.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 0.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 0.0,
+            "efficiency_bonus": 0.0,
+            "empty_inbox_wait": 0.0,
+            "delayed_success": 1.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 0.0,
+            "delayed_satisfaction_bonus": 1.0
+          },
+          "outcome": {
+            "email_id": "random-5-personal",
+            "handled_correctly": true,
+            "resolved": false,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": false,
+            "new_email_ids": [
+              "random-6-boss"
+            ],
+            "escalation_thread_created": false,
+            "satisfaction_delta": 0,
+            "notes": [
+              "Email delayed for later handling.",
+              "New emails arrived after the action."
+            ]
+          },
+          "delayed_events": [
+            {
+              "email_id": "dyn-13",
+              "scheduled_step": 6,
+              "reward": 12.0,
+              "caused_follow_up": false,
+              "caused_escalation_thread": false
+            }
+          ]
+        },
+        {
+          "time_step": 7,
+          "action": {
+            "email_id": "random-6-boss",
+            "action_type": "generate_reply",
+            "predicted_priority": "high",
+            "predicted_urgency": true,
+            "reply_tone": "professional",
+            "response_text": "Hello ceo@company.ai, thank you for reaching out. We are actively reviewing this matter and will provide a formal update soon.",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {
+              "decision_trace": {
+                "email_id": "random-6-boss",
+                "sender_importance": "boss",
+                "visible_urgency": false,
+                "known_deadline_step": null,
+                "requires_response": true,
+                "age_steps": 0,
+                "derived_tags": []
+              }
+            }
+          },
+          "reward": 22.0,
+          "metrics": {
+            "priority_correctness": 1.0,
+            "response_quality": 1.0,
+            "critical_handled": 1.0,
+            "tone_match": 1.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 0.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 0.0,
+            "efficiency_bonus": 0.0,
+            "empty_inbox_wait": 0.0,
+            "delayed_success": 1.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 0.0,
+            "delayed_satisfaction_bonus": 0.0
+          },
+          "outcome": {
+            "email_id": "random-6-boss",
+            "handled_correctly": true,
+            "resolved": true,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": false,
+            "new_email_ids": [],
+            "escalation_thread_created": false,
+            "satisfaction_delta": 2,
+            "notes": [
+              "Reply drafted and thread resolved."
+            ]
+          },
+          "delayed_events": [
+            {
+              "email_id": "random-5-personal",
+              "scheduled_step": 7,
+              "reward": 10.0,
+              "caused_follow_up": false,
+              "caused_escalation_thread": false
+            }
+          ]
+        },
+        {
+          "time_step": 8,
+          "action": {
+            "email_id": "random-5-personal",
+            "action_type": "delay_email",
+            "predicted_priority": "low",
+            "predicted_urgency": false,
+            "reply_tone": "friendly",
+            "response_text": "[Internal Note] Low priority. Delayed processing for family@home.net. No immediate response required.",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {
+              "decision_trace": {
+                "email_id": "random-5-personal",
+                "sender_importance": "friend",
+                "visible_urgency": false,
+                "known_deadline_step": null,
+                "requires_response": true,
+                "age_steps": 3,
+                "derived_tags": []
+              }
+            }
+          },
+          "reward": 17.0,
+          "metrics": {
+            "priority_correctness": 1.0,
+            "response_quality": 0.0,
+            "critical_handled": 0.0,
+            "tone_match": 0.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 0.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 0.0,
+            "efficiency_bonus": 0.0,
+            "empty_inbox_wait": 0.0,
+            "delayed_success": 1.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 0.0,
+            "delayed_satisfaction_bonus": 1.0
+          },
+          "outcome": {
+            "email_id": "random-5-personal",
+            "handled_correctly": true,
+            "resolved": false,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": false,
+            "new_email_ids": [
+              "random-8-client"
+            ],
+            "escalation_thread_created": false,
+            "satisfaction_delta": 0,
+            "notes": [
+              "Email delayed for later handling.",
+              "New emails arrived after the action."
+            ]
+          },
+          "delayed_events": [
+            {
+              "email_id": "random-6-boss",
+              "scheduled_step": 8,
+              "reward": 12.0,
+              "caused_follow_up": false,
+              "caused_escalation_thread": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "config_id": "founder_launch_dynamic",
+      "total_reward": 77.0,
+      "steps": 7,
+      "success_rate": 1.0,
+      "error_rate": 0.0,
+      "mistakes": 0,
+      "missed_deadlines": 0,
+      "escalation_threads": 0,
+      "history": [
+        {
+          "time_step": 1,
+          "action": {
+            "email_id": "dyn-2",
+            "action_type": "generate_reply",
+            "predicted_priority": "high",
+            "predicted_urgency": false,
+            "reply_tone": "helpful",
+            "response_text": "Hi design@studio.dev, I am looking into this right now! Let me gather the necessary details and get back to you shortly.",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {
+              "decision_trace": {
+                "email_id": "dyn-2",
+                "sender_importance": "client",
+                "visible_urgency": false,
+                "known_deadline_step": null,
+                "requires_response": true,
+                "age_steps": 0,
+                "derived_tags": [
+                  "design"
+                ]
+              }
+            }
+          },
+          "reward": 12.0,
+          "metrics": {
+            "priority_correctness": 1.0,
+            "response_quality": 1.0,
+            "critical_handled": 1.0,
+            "tone_match": 1.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 0.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 0.0,
+            "efficiency_bonus": 0.0,
+            "empty_inbox_wait": 0.0,
+            "delayed_success": 0.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 0.0,
+            "delayed_satisfaction_bonus": 0.0
+          },
+          "outcome": {
+            "email_id": "dyn-2",
+            "handled_correctly": true,
+            "resolved": true,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": false,
+            "new_email_ids": [],
+            "escalation_thread_created": false,
+            "satisfaction_delta": 2,
+            "notes": [
+              "Reply drafted and thread resolved."
+            ]
+          },
+          "delayed_events": []
+        },
+        {
+          "time_step": 2,
+          "action": {
+            "email_id": "dyn-1",
+            "action_type": "escalate_email",
+            "predicted_priority": "high",
+            "predicted_urgency": true,
+            "reply_tone": "professional",
+            "response_text": "Forwarding to management: The email from client@northstar.com requires immediate escalation to avoid negative downstream consequences. Please review.",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {
+              "decision_trace": {
+                "email_id": "dyn-1",
+                "sender_importance": "client",
+                "visible_urgency": true,
+                "known_deadline_step": 2,
+                "requires_response": true,
+                "age_steps": 1,
+                "derived_tags": [
+                  "milestone"
+                ]
+              }
+            }
+          },
+          "reward": 21.0,
+          "metrics": {
+            "priority_correctness": 1.0,
+            "response_quality": 0.0,
+            "critical_handled": 1.0,
+            "tone_match": 0.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 0.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 0.0,
+            "efficiency_bonus": 0.0,
+            "empty_inbox_wait": 0.0,
+            "delayed_success": 1.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 0.0,
+            "delayed_satisfaction_bonus": 1.0
+          },
+          "outcome": {
+            "email_id": "dyn-1",
+            "handled_correctly": true,
+            "resolved": true,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": false,
+            "new_email_ids": [
+              "dyn-4"
+            ],
+            "escalation_thread_created": false,
+            "satisfaction_delta": 1,
+            "notes": [
+              "Email escalated to manager.",
+              "New emails arrived after the action."
+            ]
+          },
+          "delayed_events": [
+            {
+              "email_id": "dyn-2",
+              "scheduled_step": 2,
+              "reward": 12.0,
+              "caused_follow_up": false,
+              "caused_escalation_thread": false
+            }
+          ]
+        },
+        {
+          "time_step": 3,
+          "action": {
+            "email_id": "dyn-4",
+            "action_type": "generate_reply",
+            "predicted_priority": "high",
+            "predicted_urgency": true,
+            "reply_tone": "professional",
+            "response_text": "Hello boss@company.ai, thank you for reaching out. We are actively reviewing this matter and will provide a formal update soon.",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {
+              "decision_trace": {
+                "email_id": "dyn-4",
+                "sender_importance": "boss",
+                "visible_urgency": false,
+                "known_deadline_step": null,
+                "requires_response": true,
+                "age_steps": 0,
+                "derived_tags": [
+                  "board"
+                ]
+              }
+            }
+          },
+          "reward": 14.0,
+          "metrics": {
+            "priority_correctness": 0.0,
+            "response_quality": 1.0,
+            "critical_handled": 0.0,
+            "tone_match": 1.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 0.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 0.0,
+            "efficiency_bonus": 0.0,
+            "empty_inbox_wait": 0.0,
+            "delayed_success": 1.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 0.0,
+            "delayed_satisfaction_bonus": 1.0
+          },
+          "outcome": {
+            "email_id": "dyn-4",
+            "handled_correctly": true,
+            "resolved": true,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": false,
+            "new_email_ids": [],
+            "escalation_thread_created": false,
+            "satisfaction_delta": 2,
+            "notes": [
+              "Reply drafted and thread resolved."
+            ]
+          },
+          "delayed_events": [
+            {
+              "email_id": "dyn-1",
+              "scheduled_step": 3,
+              "reward": 11.0,
+              "caused_follow_up": false,
+              "caused_escalation_thread": false
+            }
+          ]
+        },
+        {
+          "time_step": 4,
+          "action": {
+            "email_id": "dyn-3",
+            "action_type": "delay_email",
+            "predicted_priority": "low",
+            "predicted_urgency": false,
+            "reply_tone": "friendly",
+            "response_text": "[Internal Note] Low priority. Delayed processing for friend@alumni.org. No immediate response required.",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {
+              "decision_trace": {
+                "email_id": "dyn-3",
+                "sender_importance": "friend",
+                "visible_urgency": false,
+                "known_deadline_step": null,
+                "requires_response": true,
+                "age_steps": 3,
+                "derived_tags": []
+              }
+            }
+          },
+          "reward": 17.0,
+          "metrics": {
+            "priority_correctness": 1.0,
+            "response_quality": 0.0,
+            "critical_handled": 0.0,
+            "tone_match": 0.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 0.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 0.0,
+            "efficiency_bonus": 0.0,
+            "empty_inbox_wait": 0.0,
+            "delayed_success": 1.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 0.0,
+            "delayed_satisfaction_bonus": 1.0
+          },
+          "outcome": {
+            "email_id": "dyn-3",
+            "handled_correctly": true,
+            "resolved": false,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": false,
+            "new_email_ids": [
+              "dyn-5"
+            ],
+            "escalation_thread_created": false,
+            "satisfaction_delta": 0,
+            "notes": [
+              "Email delayed for later handling.",
+              "New emails arrived after the action."
+            ]
+          },
+          "delayed_events": [
+            {
+              "email_id": "dyn-4",
+              "scheduled_step": 4,
+              "reward": 12.0,
+              "caused_follow_up": false,
+              "caused_escalation_thread": false
+            }
+          ]
+        },
+        {
+          "time_step": 5,
+          "action": {
+            "email_id": "dyn-5",
+            "action_type": "classify_email",
+            "predicted_priority": "medium",
+            "predicted_urgency": false,
+            "reply_tone": "neutral",
+            "response_text": "[Internal Note] Archived email from unknown@opsmail.dev. No action needed.",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {
+              "decision_trace": {
+                "email_id": "dyn-5",
+                "sender_importance": "client",
+                "visible_urgency": false,
+                "known_deadline_step": null,
+                "requires_response": true,
+                "age_steps": 0,
+                "derived_tags": [
+                  "ambiguous"
+                ]
+              }
+            }
+          },
+          "reward": 11.0,
+          "metrics": {
+            "priority_correctness": 1.0,
+            "response_quality": 0.0,
+            "critical_handled": 0.0,
+            "tone_match": 0.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 1.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 0.0,
+            "efficiency_bonus": 0.0,
+            "empty_inbox_wait": 0.0,
+            "delayed_success": 1.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 0.0,
+            "delayed_satisfaction_bonus": 0.0
+          },
+          "outcome": {
+            "email_id": "dyn-5",
+            "handled_correctly": true,
+            "resolved": false,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": false,
+            "new_email_ids": [],
+            "escalation_thread_created": false,
+            "satisfaction_delta": 0,
+            "notes": [
+              "Email classified for later batching."
+            ]
+          },
+          "delayed_events": [
+            {
+              "email_id": "dyn-3",
+              "scheduled_step": 5,
+              "reward": 10.0,
+              "caused_follow_up": false,
+              "caused_escalation_thread": false
+            }
+          ]
+        },
+        {
+          "time_step": 6,
+          "action": {
+            "email_id": "dyn-5",
+            "action_type": "classify_email",
+            "predicted_priority": "medium",
+            "predicted_urgency": false,
+            "reply_tone": "neutral",
+            "response_text": "[Internal Note] Archived email from unknown@opsmail.dev. No action needed.",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {
+              "decision_trace": {
+                "email_id": "dyn-5",
+                "sender_importance": "client",
+                "visible_urgency": false,
+                "known_deadline_step": null,
+                "requires_response": true,
+                "age_steps": 1,
+                "derived_tags": [
+                  "ambiguous"
+                ]
+              }
+            }
+          },
+          "reward": 1.0,
+          "metrics": {
+            "priority_correctness": 1.0,
+            "response_quality": 0.0,
+            "critical_handled": 0.0,
+            "tone_match": 0.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 1.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 0.0,
+            "efficiency_bonus": 0.0,
+            "empty_inbox_wait": 0.0,
+            "delayed_success": 1.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 1.0,
+            "delayed_satisfaction_bonus": 0.0
+          },
+          "outcome": {
+            "email_id": "dyn-5",
+            "handled_correctly": true,
+            "resolved": false,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": false,
+            "new_email_ids": [],
+            "escalation_thread_created": false,
+            "satisfaction_delta": 0,
+            "notes": [
+              "Email classified for later batching."
+            ]
+          },
+          "delayed_events": [
+            {
+              "email_id": "dyn-5",
+              "scheduled_step": 6,
+              "reward": 0.0,
+              "caused_follow_up": false,
+              "caused_escalation_thread": false
+            }
+          ]
+        },
+        {
+          "time_step": 7,
+          "action": {
+            "email_id": "dyn-5",
+            "action_type": "classify_email",
+            "predicted_priority": "medium",
+            "predicted_urgency": false,
+            "reply_tone": "neutral",
+            "response_text": "[Internal Note] Archived email from unknown@opsmail.dev. No action needed.",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {
+              "decision_trace": {
+                "email_id": "dyn-5",
+                "sender_importance": "client",
+                "visible_urgency": false,
+                "known_deadline_step": null,
+                "requires_response": true,
+                "age_steps": 2,
+                "derived_tags": [
+                  "ambiguous"
+                ]
+              }
+            }
+          },
+          "reward": 1.0,
+          "metrics": {
+            "priority_correctness": 1.0,
+            "response_quality": 0.0,
+            "critical_handled": 0.0,
+            "tone_match": 0.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 1.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 0.0,
+            "efficiency_bonus": 0.0,
+            "empty_inbox_wait": 0.0,
+            "delayed_success": 1.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 1.0,
+            "delayed_satisfaction_bonus": 0.0
+          },
+          "outcome": {
+            "email_id": "dyn-5",
+            "handled_correctly": true,
+            "resolved": false,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": false,
+            "new_email_ids": [
+              "random-7-personal"
+            ],
+            "escalation_thread_created": false,
+            "satisfaction_delta": 0,
+            "notes": [
+              "Email classified for later batching.",
+              "New emails arrived after the action."
+            ]
+          },
+          "delayed_events": [
+            {
+              "email_id": "dyn-5",
+              "scheduled_step": 7,
+              "reward": 0.0,
+              "caused_follow_up": false,
+              "caused_escalation_thread": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "config_id": "ops_fire_drill_dynamic",
+      "total_reward": 127.0,
+      "steps": 8,
+      "success_rate": 0.88,
+      "error_rate": 0.0,
+      "mistakes": 0,
+      "missed_deadlines": 0,
+      "escalation_threads": 0,
+      "history": [
+        {
+          "time_step": 1,
+          "action": {
+            "email_id": "dyn-10",
+            "action_type": "escalate_email",
+            "predicted_priority": "high",
+            "predicted_urgency": false,
+            "reply_tone": "professional",
+            "response_text": "Forwarding to management: The email from csm@renewals.app requires immediate escalation to avoid negative downstream consequences. Please review.",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {
+              "decision_trace": {
+                "email_id": "dyn-10",
+                "sender_importance": "client",
+                "visible_urgency": false,
+                "known_deadline_step": null,
+                "requires_response": true,
+                "age_steps": 0,
+                "derived_tags": [
+                  "renewal"
+                ]
+              }
+            }
+          },
+          "reward": 9.0,
+          "metrics": {
+            "priority_correctness": 1.0,
+            "response_quality": 0.0,
+            "critical_handled": 1.0,
+            "tone_match": 0.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 0.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 0.0,
+            "efficiency_bonus": 0.0,
+            "empty_inbox_wait": 0.0,
+            "delayed_success": 0.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 0.0,
+            "delayed_satisfaction_bonus": 0.0
+          },
+          "outcome": {
+            "email_id": "dyn-10",
+            "handled_correctly": true,
+            "resolved": true,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": false,
+            "new_email_ids": [],
+            "escalation_thread_created": false,
+            "satisfaction_delta": 1,
+            "notes": [
+              "Email escalated to manager."
+            ]
+          },
+          "delayed_events": []
+        },
+        {
+          "time_step": 2,
+          "action": {
+            "email_id": "dyn-11",
+            "action_type": "ignore_email",
+            "predicted_priority": "low",
+            "predicted_urgency": false,
+            "reply_tone": "neutral",
+            "response_text": "[Internal Note] Archived email from travel@airline.com. No action needed.",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {
+              "decision_trace": {
+                "email_id": "dyn-11",
+                "sender_importance": "friend",
+                "visible_urgency": false,
+                "known_deadline_step": null,
+                "requires_response": false,
+                "age_steps": 1,
+                "derived_tags": []
+              }
+            }
+          },
+          "reward": 16.0,
+          "metrics": {
+            "priority_correctness": 1.0,
+            "response_quality": 0.0,
+            "critical_handled": 0.0,
+            "tone_match": 0.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 0.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 0.0,
+            "efficiency_bonus": 0.0,
+            "empty_inbox_wait": 0.0,
+            "delayed_success": 1.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 0.0,
+            "delayed_satisfaction_bonus": 1.0
+          },
+          "outcome": {
+            "email_id": "dyn-11",
+            "handled_correctly": true,
+            "resolved": true,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": false,
+            "new_email_ids": [
+              "dyn-12"
+            ],
+            "escalation_thread_created": false,
+            "satisfaction_delta": 0,
+            "notes": [
+              "Email ignored and removed from queue.",
+              "New emails arrived after the action."
+            ]
+          },
+          "delayed_events": [
+            {
+              "email_id": "dyn-10",
+              "scheduled_step": 2,
+              "reward": 11.0,
+              "caused_follow_up": false,
+              "caused_escalation_thread": false
+            }
+          ]
+        },
+        {
+          "time_step": 3,
+          "action": {
+            "email_id": "dyn-12",
+            "action_type": "generate_reply",
+            "predicted_priority": "high",
+            "predicted_urgency": true,
+            "reply_tone": "professional",
+            "response_text": "Hello legal@partner.org, thank you for reaching out. We are actively reviewing this matter and will provide a formal update soon.",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {
+              "decision_trace": {
+                "email_id": "dyn-12",
+                "sender_importance": "client",
+                "visible_urgency": true,
+                "known_deadline_step": 3,
+                "requires_response": true,
+                "age_steps": 0,
+                "derived_tags": [
+                  "contract"
+                ]
+              }
+            }
+          },
+          "reward": 22.0,
+          "metrics": {
+            "priority_correctness": 1.0,
+            "response_quality": 1.0,
+            "critical_handled": 1.0,
+            "tone_match": 1.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 0.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 0.0,
+            "efficiency_bonus": 0.0,
+            "empty_inbox_wait": 0.0,
+            "delayed_success": 1.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 0.0,
+            "delayed_satisfaction_bonus": 0.0
+          },
+          "outcome": {
+            "email_id": "dyn-12",
+            "handled_correctly": true,
+            "resolved": true,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": false,
+            "new_email_ids": [],
+            "escalation_thread_created": false,
+            "satisfaction_delta": 2,
+            "notes": [
+              "Reply drafted and thread resolved."
+            ]
+          },
+          "delayed_events": [
+            {
+              "email_id": "dyn-11",
+              "scheduled_step": 3,
+              "reward": 10.0,
+              "caused_follow_up": false,
+              "caused_escalation_thread": false
+            }
+          ]
+        },
+        {
+          "time_step": 4,
+          "action": {
+            "email_id": "none",
+            "action_type": "ignore_email",
+            "predicted_priority": null,
+            "predicted_urgency": null,
+            "reply_tone": null,
+            "response_text": "",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {}
+          },
+          "reward": 12.0,
+          "metrics": {
+            "priority_correctness": 0.0,
+            "response_quality": 0.0,
+            "critical_handled": 0.0,
+            "tone_match": 0.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 0.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 0.0,
+            "efficiency_bonus": 0.0,
+            "empty_inbox_wait": 1.0,
+            "delayed_success": 1.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 0.0,
+            "delayed_satisfaction_bonus": 1.0
+          },
+          "outcome": {
+            "email_id": "none",
+            "handled_correctly": false,
+            "resolved": false,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": false,
+            "new_email_ids": [
+              "dyn-13"
+            ],
+            "escalation_thread_created": false,
+            "satisfaction_delta": 0,
+            "notes": [
+              "Action referenced an unknown email.",
+              "New emails arrived after the action."
+            ]
+          },
+          "delayed_events": [
+            {
+              "email_id": "dyn-12",
+              "scheduled_step": 4,
+              "reward": 12.0,
+              "caused_follow_up": false,
+              "caused_escalation_thread": false
+            }
+          ]
+        },
+        {
+          "time_step": 5,
+          "action": {
+            "email_id": "dyn-13",
+            "action_type": "generate_reply",
+            "predicted_priority": "high",
+            "predicted_urgency": false,
+            "reply_tone": "professional",
+            "response_text": "Hello ceo@company.ai, thank you for reaching out. We are actively reviewing this matter and will provide a formal update soon.",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {
+              "decision_trace": {
+                "email_id": "dyn-13",
+                "sender_importance": "boss",
+                "visible_urgency": false,
+                "known_deadline_step": null,
+                "requires_response": true,
+                "age_steps": 0,
+                "derived_tags": [
+                  "board"
+                ]
+              }
+            }
+          },
+          "reward": 12.0,
+          "metrics": {
+            "priority_correctness": 1.0,
+            "response_quality": 1.0,
+            "critical_handled": 1.0,
+            "tone_match": 1.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 0.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 0.0,
+            "efficiency_bonus": 0.0,
+            "empty_inbox_wait": 0.0,
+            "delayed_success": 0.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 0.0,
+            "delayed_satisfaction_bonus": 0.0
+          },
+          "outcome": {
+            "email_id": "dyn-13",
+            "handled_correctly": true,
+            "resolved": true,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": false,
+            "new_email_ids": [
+              "random-5-personal"
+            ],
+            "escalation_thread_created": false,
+            "satisfaction_delta": 2,
+            "notes": [
+              "Reply drafted and thread resolved.",
+              "New emails arrived after the action."
+            ]
+          },
+          "delayed_events": []
+        },
+        {
+          "time_step": 6,
+          "action": {
+            "email_id": "random-5-personal",
+            "action_type": "delay_email",
+            "predicted_priority": "low",
+            "predicted_urgency": false,
+            "reply_tone": "friendly",
+            "response_text": "[Internal Note] Low priority. Delayed processing for family@home.net. No immediate response required.",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {
+              "decision_trace": {
+                "email_id": "random-5-personal",
+                "sender_importance": "friend",
+                "visible_urgency": false,
+                "known_deadline_step": null,
+                "requires_response": true,
+                "age_steps": 0,
+                "derived_tags": []
+              }
+            }
+          },
+          "reward": 17.0,
+          "metrics": {
+            "priority_correctness": 1.0,
+            "response_quality": 0.0,
+            "critical_handled": 0.0,
+            "tone_match": 0.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 0.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 0.0,
+            "efficiency_bonus": 0.0,
+            "empty_inbox_wait": 0.0,
+            "delayed_success": 1.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 0.0,
+            "delayed_satisfaction_bonus": 1.0
+          },
+          "outcome": {
+            "email_id": "random-5-personal",
+            "handled_correctly": true,
+            "resolved": false,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": false,
+            "new_email_ids": [
+              "random-6-boss"
+            ],
+            "escalation_thread_created": false,
+            "satisfaction_delta": 0,
+            "notes": [
+              "Email delayed for later handling.",
+              "New emails arrived after the action."
+            ]
+          },
+          "delayed_events": [
+            {
+              "email_id": "dyn-13",
+              "scheduled_step": 6,
+              "reward": 12.0,
+              "caused_follow_up": false,
+              "caused_escalation_thread": false
+            }
+          ]
+        },
+        {
+          "time_step": 7,
+          "action": {
+            "email_id": "random-6-boss",
+            "action_type": "generate_reply",
+            "predicted_priority": "high",
+            "predicted_urgency": true,
+            "reply_tone": "professional",
+            "response_text": "Hello ceo@company.ai, thank you for reaching out. We are actively reviewing this matter and will provide a formal update soon.",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {
+              "decision_trace": {
+                "email_id": "random-6-boss",
+                "sender_importance": "boss",
+                "visible_urgency": false,
+                "known_deadline_step": null,
+                "requires_response": true,
+                "age_steps": 0,
+                "derived_tags": []
+              }
+            }
+          },
+          "reward": 22.0,
+          "metrics": {
+            "priority_correctness": 1.0,
+            "response_quality": 1.0,
+            "critical_handled": 1.0,
+            "tone_match": 1.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 0.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 0.0,
+            "efficiency_bonus": 0.0,
+            "empty_inbox_wait": 0.0,
+            "delayed_success": 1.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 0.0,
+            "delayed_satisfaction_bonus": 0.0
+          },
+          "outcome": {
+            "email_id": "random-6-boss",
+            "handled_correctly": true,
+            "resolved": true,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": false,
+            "new_email_ids": [],
+            "escalation_thread_created": false,
+            "satisfaction_delta": 2,
+            "notes": [
+              "Reply drafted and thread resolved."
+            ]
+          },
+          "delayed_events": [
+            {
+              "email_id": "random-5-personal",
+              "scheduled_step": 7,
+              "reward": 10.0,
+              "caused_follow_up": false,
+              "caused_escalation_thread": false
+            }
+          ]
+        },
+        {
+          "time_step": 8,
+          "action": {
+            "email_id": "random-5-personal",
+            "action_type": "delay_email",
+            "predicted_priority": "low",
+            "predicted_urgency": false,
+            "reply_tone": "friendly",
+            "response_text": "[Internal Note] Low priority. Delayed processing for family@home.net. No immediate response required.",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {
+              "decision_trace": {
+                "email_id": "random-5-personal",
+                "sender_importance": "friend",
+                "visible_urgency": false,
+                "known_deadline_step": null,
+                "requires_response": true,
+                "age_steps": 3,
+                "derived_tags": []
+              }
+            }
+          },
+          "reward": 17.0,
+          "metrics": {
+            "priority_correctness": 1.0,
+            "response_quality": 0.0,
+            "critical_handled": 0.0,
+            "tone_match": 0.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 0.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 0.0,
+            "efficiency_bonus": 0.0,
+            "empty_inbox_wait": 0.0,
+            "delayed_success": 1.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 0.0,
+            "delayed_satisfaction_bonus": 1.0
+          },
+          "outcome": {
+            "email_id": "random-5-personal",
+            "handled_correctly": true,
+            "resolved": false,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": false,
+            "new_email_ids": [
+              "random-8-client"
+            ],
+            "escalation_thread_created": false,
+            "satisfaction_delta": 0,
+            "notes": [
+              "Email delayed for later handling.",
+              "New emails arrived after the action."
+            ]
+          },
+          "delayed_events": [
+            {
+              "email_id": "random-6-boss",
+              "scheduled_step": 8,
+              "reward": 12.0,
+              "caused_follow_up": false,
+              "caused_escalation_thread": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "config_id": "founder_launch_dynamic",
+      "total_reward": 77.0,
+      "steps": 7,
+      "success_rate": 1.0,
+      "error_rate": 0.0,
+      "mistakes": 0,
+      "missed_deadlines": 0,
+      "escalation_threads": 0,
+      "history": [
+        {
+          "time_step": 1,
+          "action": {
+            "email_id": "dyn-2",
+            "action_type": "generate_reply",
+            "predicted_priority": "high",
+            "predicted_urgency": false,
+            "reply_tone": "helpful",
+            "response_text": "Hi design@studio.dev, I am looking into this right now! Let me gather the necessary details and get back to you shortly.",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {
+              "decision_trace": {
+                "email_id": "dyn-2",
+                "sender_importance": "client",
+                "visible_urgency": false,
+                "known_deadline_step": null,
+                "requires_response": true,
+                "age_steps": 0,
+                "derived_tags": [
+                  "design"
+                ]
+              }
+            }
+          },
+          "reward": 12.0,
+          "metrics": {
+            "priority_correctness": 1.0,
+            "response_quality": 1.0,
+            "critical_handled": 1.0,
+            "tone_match": 1.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 0.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 0.0,
+            "efficiency_bonus": 0.0,
+            "empty_inbox_wait": 0.0,
+            "delayed_success": 0.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 0.0,
+            "delayed_satisfaction_bonus": 0.0
+          },
+          "outcome": {
+            "email_id": "dyn-2",
+            "handled_correctly": true,
+            "resolved": true,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": false,
+            "new_email_ids": [],
+            "escalation_thread_created": false,
+            "satisfaction_delta": 2,
+            "notes": [
+              "Reply drafted and thread resolved."
+            ]
+          },
+          "delayed_events": []
+        },
+        {
+          "time_step": 2,
+          "action": {
+            "email_id": "dyn-1",
+            "action_type": "escalate_email",
+            "predicted_priority": "high",
+            "predicted_urgency": true,
+            "reply_tone": "professional",
+            "response_text": "Forwarding to management: The email from client@northstar.com requires immediate escalation to avoid negative downstream consequences. Please review.",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {
+              "decision_trace": {
+                "email_id": "dyn-1",
+                "sender_importance": "client",
+                "visible_urgency": true,
+                "known_deadline_step": 2,
+                "requires_response": true,
+                "age_steps": 1,
+                "derived_tags": [
+                  "milestone"
+                ]
+              }
+            }
+          },
+          "reward": 21.0,
+          "metrics": {
+            "priority_correctness": 1.0,
+            "response_quality": 0.0,
+            "critical_handled": 1.0,
+            "tone_match": 0.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 0.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 0.0,
+            "efficiency_bonus": 0.0,
+            "empty_inbox_wait": 0.0,
+            "delayed_success": 1.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 0.0,
+            "delayed_satisfaction_bonus": 1.0
+          },
+          "outcome": {
+            "email_id": "dyn-1",
+            "handled_correctly": true,
+            "resolved": true,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": false,
+            "new_email_ids": [
+              "dyn-4"
+            ],
+            "escalation_thread_created": false,
+            "satisfaction_delta": 1,
+            "notes": [
+              "Email escalated to manager.",
+              "New emails arrived after the action."
+            ]
+          },
+          "delayed_events": [
+            {
+              "email_id": "dyn-2",
+              "scheduled_step": 2,
+              "reward": 12.0,
+              "caused_follow_up": false,
+              "caused_escalation_thread": false
+            }
+          ]
+        },
+        {
+          "time_step": 3,
+          "action": {
+            "email_id": "dyn-4",
+            "action_type": "generate_reply",
+            "predicted_priority": "high",
+            "predicted_urgency": true,
+            "reply_tone": "professional",
+            "response_text": "Hello boss@company.ai, thank you for reaching out. We are actively reviewing this matter and will provide a formal update soon.",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {
+              "decision_trace": {
+                "email_id": "dyn-4",
+                "sender_importance": "boss",
+                "visible_urgency": false,
+                "known_deadline_step": null,
+                "requires_response": true,
+                "age_steps": 0,
+                "derived_tags": [
+                  "board"
+                ]
+              }
+            }
+          },
+          "reward": 14.0,
+          "metrics": {
+            "priority_correctness": 0.0,
+            "response_quality": 1.0,
+            "critical_handled": 0.0,
+            "tone_match": 1.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 0.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 0.0,
+            "efficiency_bonus": 0.0,
+            "empty_inbox_wait": 0.0,
+            "delayed_success": 1.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 0.0,
+            "delayed_satisfaction_bonus": 1.0
+          },
+          "outcome": {
+            "email_id": "dyn-4",
+            "handled_correctly": true,
+            "resolved": true,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": false,
+            "new_email_ids": [],
+            "escalation_thread_created": false,
+            "satisfaction_delta": 2,
+            "notes": [
+              "Reply drafted and thread resolved."
+            ]
+          },
+          "delayed_events": [
+            {
+              "email_id": "dyn-1",
+              "scheduled_step": 3,
+              "reward": 11.0,
+              "caused_follow_up": false,
+              "caused_escalation_thread": false
+            }
+          ]
+        },
+        {
+          "time_step": 4,
+          "action": {
+            "email_id": "dyn-3",
+            "action_type": "delay_email",
+            "predicted_priority": "low",
+            "predicted_urgency": false,
+            "reply_tone": "friendly",
+            "response_text": "[Internal Note] Low priority. Delayed processing for friend@alumni.org. No immediate response required.",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {
+              "decision_trace": {
+                "email_id": "dyn-3",
+                "sender_importance": "friend",
+                "visible_urgency": false,
+                "known_deadline_step": null,
+                "requires_response": true,
+                "age_steps": 3,
+                "derived_tags": []
+              }
+            }
+          },
+          "reward": 17.0,
+          "metrics": {
+            "priority_correctness": 1.0,
+            "response_quality": 0.0,
+            "critical_handled": 0.0,
+            "tone_match": 0.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 0.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 0.0,
+            "efficiency_bonus": 0.0,
+            "empty_inbox_wait": 0.0,
+            "delayed_success": 1.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 0.0,
+            "delayed_satisfaction_bonus": 1.0
+          },
+          "outcome": {
+            "email_id": "dyn-3",
+            "handled_correctly": true,
+            "resolved": false,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": false,
+            "new_email_ids": [
+              "dyn-5"
+            ],
+            "escalation_thread_created": false,
+            "satisfaction_delta": 0,
+            "notes": [
+              "Email delayed for later handling.",
+              "New emails arrived after the action."
+            ]
+          },
+          "delayed_events": [
+            {
+              "email_id": "dyn-4",
+              "scheduled_step": 4,
+              "reward": 12.0,
+              "caused_follow_up": false,
+              "caused_escalation_thread": false
+            }
+          ]
+        },
+        {
+          "time_step": 5,
+          "action": {
+            "email_id": "dyn-5",
+            "action_type": "classify_email",
+            "predicted_priority": "medium",
+            "predicted_urgency": false,
+            "reply_tone": "neutral",
+            "response_text": "[Internal Note] Archived email from unknown@opsmail.dev. No action needed.",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {
+              "decision_trace": {
+                "email_id": "dyn-5",
+                "sender_importance": "client",
+                "visible_urgency": false,
+                "known_deadline_step": null,
+                "requires_response": true,
+                "age_steps": 0,
+                "derived_tags": [
+                  "ambiguous"
+                ]
+              }
+            }
+          },
+          "reward": 11.0,
+          "metrics": {
+            "priority_correctness": 1.0,
+            "response_quality": 0.0,
+            "critical_handled": 0.0,
+            "tone_match": 0.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 1.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 0.0,
+            "efficiency_bonus": 0.0,
+            "empty_inbox_wait": 0.0,
+            "delayed_success": 1.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 0.0,
+            "delayed_satisfaction_bonus": 0.0
+          },
+          "outcome": {
+            "email_id": "dyn-5",
+            "handled_correctly": true,
+            "resolved": false,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": false,
+            "new_email_ids": [],
+            "escalation_thread_created": false,
+            "satisfaction_delta": 0,
+            "notes": [
+              "Email classified for later batching."
+            ]
+          },
+          "delayed_events": [
+            {
+              "email_id": "dyn-3",
+              "scheduled_step": 5,
+              "reward": 10.0,
+              "caused_follow_up": false,
+              "caused_escalation_thread": false
+            }
+          ]
+        },
+        {
+          "time_step": 6,
+          "action": {
+            "email_id": "dyn-5",
+            "action_type": "classify_email",
+            "predicted_priority": "medium",
+            "predicted_urgency": false,
+            "reply_tone": "neutral",
+            "response_text": "[Internal Note] Archived email from unknown@opsmail.dev. No action needed.",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {
+              "decision_trace": {
+                "email_id": "dyn-5",
+                "sender_importance": "client",
+                "visible_urgency": false,
+                "known_deadline_step": null,
+                "requires_response": true,
+                "age_steps": 1,
+                "derived_tags": [
+                  "ambiguous"
+                ]
+              }
+            }
+          },
+          "reward": 1.0,
+          "metrics": {
+            "priority_correctness": 1.0,
+            "response_quality": 0.0,
+            "critical_handled": 0.0,
+            "tone_match": 0.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 1.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 0.0,
+            "efficiency_bonus": 0.0,
+            "empty_inbox_wait": 0.0,
+            "delayed_success": 1.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 1.0,
+            "delayed_satisfaction_bonus": 0.0
+          },
+          "outcome": {
+            "email_id": "dyn-5",
+            "handled_correctly": true,
+            "resolved": false,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": false,
+            "new_email_ids": [],
+            "escalation_thread_created": false,
+            "satisfaction_delta": 0,
+            "notes": [
+              "Email classified for later batching."
+            ]
+          },
+          "delayed_events": [
+            {
+              "email_id": "dyn-5",
+              "scheduled_step": 6,
+              "reward": 0.0,
+              "caused_follow_up": false,
+              "caused_escalation_thread": false
+            }
+          ]
+        },
+        {
+          "time_step": 7,
+          "action": {
+            "email_id": "dyn-5",
+            "action_type": "classify_email",
+            "predicted_priority": "medium",
+            "predicted_urgency": false,
+            "reply_tone": "neutral",
+            "response_text": "[Internal Note] Archived email from unknown@opsmail.dev. No action needed.",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {
+              "decision_trace": {
+                "email_id": "dyn-5",
+                "sender_importance": "client",
+                "visible_urgency": false,
+                "known_deadline_step": null,
+                "requires_response": true,
+                "age_steps": 2,
+                "derived_tags": [
+                  "ambiguous"
+                ]
+              }
+            }
+          },
+          "reward": 1.0,
+          "metrics": {
+            "priority_correctness": 1.0,
+            "response_quality": 0.0,
+            "critical_handled": 0.0,
+            "tone_match": 0.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 1.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 0.0,
+            "efficiency_bonus": 0.0,
+            "empty_inbox_wait": 0.0,
+            "delayed_success": 1.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 1.0,
+            "delayed_satisfaction_bonus": 0.0
+          },
+          "outcome": {
+            "email_id": "dyn-5",
+            "handled_correctly": true,
+            "resolved": false,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": false,
+            "new_email_ids": [
+              "random-7-personal"
+            ],
+            "escalation_thread_created": false,
+            "satisfaction_delta": 0,
+            "notes": [
+              "Email classified for later batching.",
+              "New emails arrived after the action."
+            ]
+          },
+          "delayed_events": [
+            {
+              "email_id": "dyn-5",
+              "scheduled_step": 7,
+              "reward": 0.0,
+              "caused_follow_up": false,
+              "caused_escalation_thread": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "config_id": "ops_fire_drill_dynamic",
+      "total_reward": 127.0,
+      "steps": 8,
+      "success_rate": 0.88,
+      "error_rate": 0.0,
+      "mistakes": 0,
+      "missed_deadlines": 0,
+      "escalation_threads": 0,
+      "history": [
+        {
+          "time_step": 1,
+          "action": {
+            "email_id": "dyn-10",
+            "action_type": "escalate_email",
+            "predicted_priority": "high",
+            "predicted_urgency": false,
+            "reply_tone": "professional",
+            "response_text": "Forwarding to management: The email from csm@renewals.app requires immediate escalation to avoid negative downstream consequences. Please review.",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {
+              "decision_trace": {
+                "email_id": "dyn-10",
+                "sender_importance": "client",
+                "visible_urgency": false,
+                "known_deadline_step": null,
+                "requires_response": true,
+                "age_steps": 0,
+                "derived_tags": [
+                  "renewal"
+                ]
+              }
+            }
+          },
+          "reward": 9.0,
+          "metrics": {
+            "priority_correctness": 1.0,
+            "response_quality": 0.0,
+            "critical_handled": 1.0,
+            "tone_match": 0.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 0.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 0.0,
+            "efficiency_bonus": 0.0,
+            "empty_inbox_wait": 0.0,
+            "delayed_success": 0.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 0.0,
+            "delayed_satisfaction_bonus": 0.0
+          },
+          "outcome": {
+            "email_id": "dyn-10",
+            "handled_correctly": true,
+            "resolved": true,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": false,
+            "new_email_ids": [],
+            "escalation_thread_created": false,
+            "satisfaction_delta": 1,
+            "notes": [
+              "Email escalated to manager."
+            ]
+          },
+          "delayed_events": []
+        },
+        {
+          "time_step": 2,
+          "action": {
+            "email_id": "dyn-11",
+            "action_type": "ignore_email",
+            "predicted_priority": "low",
+            "predicted_urgency": false,
+            "reply_tone": "neutral",
+            "response_text": "[Internal Note] Archived email from travel@airline.com. No action needed.",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {
+              "decision_trace": {
+                "email_id": "dyn-11",
+                "sender_importance": "friend",
+                "visible_urgency": false,
+                "known_deadline_step": null,
+                "requires_response": false,
+                "age_steps": 1,
+                "derived_tags": []
+              }
+            }
+          },
+          "reward": 16.0,
+          "metrics": {
+            "priority_correctness": 1.0,
+            "response_quality": 0.0,
+            "critical_handled": 0.0,
+            "tone_match": 0.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 0.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 0.0,
+            "efficiency_bonus": 0.0,
+            "empty_inbox_wait": 0.0,
+            "delayed_success": 1.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 0.0,
+            "delayed_satisfaction_bonus": 1.0
+          },
+          "outcome": {
+            "email_id": "dyn-11",
+            "handled_correctly": true,
+            "resolved": true,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": false,
+            "new_email_ids": [
+              "dyn-12"
+            ],
+            "escalation_thread_created": false,
+            "satisfaction_delta": 0,
+            "notes": [
+              "Email ignored and removed from queue.",
+              "New emails arrived after the action."
+            ]
+          },
+          "delayed_events": [
+            {
+              "email_id": "dyn-10",
+              "scheduled_step": 2,
+              "reward": 11.0,
+              "caused_follow_up": false,
+              "caused_escalation_thread": false
+            }
+          ]
+        },
+        {
+          "time_step": 3,
+          "action": {
+            "email_id": "dyn-12",
+            "action_type": "generate_reply",
+            "predicted_priority": "high",
+            "predicted_urgency": true,
+            "reply_tone": "professional",
+            "response_text": "Hello legal@partner.org, thank you for reaching out. We are actively reviewing this matter and will provide a formal update soon.",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {
+              "decision_trace": {
+                "email_id": "dyn-12",
+                "sender_importance": "client",
+                "visible_urgency": true,
+                "known_deadline_step": 3,
+                "requires_response": true,
+                "age_steps": 0,
+                "derived_tags": [
+                  "contract"
+                ]
+              }
+            }
+          },
+          "reward": 22.0,
+          "metrics": {
+            "priority_correctness": 1.0,
+            "response_quality": 1.0,
+            "critical_handled": 1.0,
+            "tone_match": 1.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 0.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 0.0,
+            "efficiency_bonus": 0.0,
+            "empty_inbox_wait": 0.0,
+            "delayed_success": 1.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 0.0,
+            "delayed_satisfaction_bonus": 0.0
+          },
+          "outcome": {
+            "email_id": "dyn-12",
+            "handled_correctly": true,
+            "resolved": true,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": false,
+            "new_email_ids": [],
+            "escalation_thread_created": false,
+            "satisfaction_delta": 2,
+            "notes": [
+              "Reply drafted and thread resolved."
+            ]
+          },
+          "delayed_events": [
+            {
+              "email_id": "dyn-11",
+              "scheduled_step": 3,
+              "reward": 10.0,
+              "caused_follow_up": false,
+              "caused_escalation_thread": false
+            }
+          ]
+        },
+        {
+          "time_step": 4,
+          "action": {
+            "email_id": "none",
+            "action_type": "ignore_email",
+            "predicted_priority": null,
+            "predicted_urgency": null,
+            "reply_tone": null,
+            "response_text": "",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {}
+          },
+          "reward": 12.0,
+          "metrics": {
+            "priority_correctness": 0.0,
+            "response_quality": 0.0,
+            "critical_handled": 0.0,
+            "tone_match": 0.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 0.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 0.0,
+            "efficiency_bonus": 0.0,
+            "empty_inbox_wait": 1.0,
+            "delayed_success": 1.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 0.0,
+            "delayed_satisfaction_bonus": 1.0
+          },
+          "outcome": {
+            "email_id": "none",
+            "handled_correctly": false,
+            "resolved": false,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": false,
+            "new_email_ids": [
+              "dyn-13"
+            ],
+            "escalation_thread_created": false,
+            "satisfaction_delta": 0,
+            "notes": [
+              "Action referenced an unknown email.",
+              "New emails arrived after the action."
+            ]
+          },
+          "delayed_events": [
+            {
+              "email_id": "dyn-12",
+              "scheduled_step": 4,
+              "reward": 12.0,
+              "caused_follow_up": false,
+              "caused_escalation_thread": false
+            }
+          ]
+        },
+        {
+          "time_step": 5,
+          "action": {
+            "email_id": "dyn-13",
+            "action_type": "generate_reply",
+            "predicted_priority": "high",
+            "predicted_urgency": false,
+            "reply_tone": "professional",
+            "response_text": "Hello ceo@company.ai, thank you for reaching out. We are actively reviewing this matter and will provide a formal update soon.",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {
+              "decision_trace": {
+                "email_id": "dyn-13",
+                "sender_importance": "boss",
+                "visible_urgency": false,
+                "known_deadline_step": null,
+                "requires_response": true,
+                "age_steps": 0,
+                "derived_tags": [
+                  "board"
+                ]
+              }
+            }
+          },
+          "reward": 12.0,
+          "metrics": {
+            "priority_correctness": 1.0,
+            "response_quality": 1.0,
+            "critical_handled": 1.0,
+            "tone_match": 1.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 0.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 0.0,
+            "efficiency_bonus": 0.0,
+            "empty_inbox_wait": 0.0,
+            "delayed_success": 0.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 0.0,
+            "delayed_satisfaction_bonus": 0.0
+          },
+          "outcome": {
+            "email_id": "dyn-13",
+            "handled_correctly": true,
+            "resolved": true,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": false,
+            "new_email_ids": [
+              "random-5-personal"
+            ],
+            "escalation_thread_created": false,
+            "satisfaction_delta": 2,
+            "notes": [
+              "Reply drafted and thread resolved.",
+              "New emails arrived after the action."
+            ]
+          },
+          "delayed_events": []
+        },
+        {
+          "time_step": 6,
+          "action": {
+            "email_id": "random-5-personal",
+            "action_type": "delay_email",
+            "predicted_priority": "low",
+            "predicted_urgency": false,
+            "reply_tone": "friendly",
+            "response_text": "[Internal Note] Low priority. Delayed processing for family@home.net. No immediate response required.",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {
+              "decision_trace": {
+                "email_id": "random-5-personal",
+                "sender_importance": "friend",
+                "visible_urgency": false,
+                "known_deadline_step": null,
+                "requires_response": true,
+                "age_steps": 0,
+                "derived_tags": []
+              }
+            }
+          },
+          "reward": 17.0,
+          "metrics": {
+            "priority_correctness": 1.0,
+            "response_quality": 0.0,
+            "critical_handled": 0.0,
+            "tone_match": 0.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 0.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 0.0,
+            "efficiency_bonus": 0.0,
+            "empty_inbox_wait": 0.0,
+            "delayed_success": 1.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 0.0,
+            "delayed_satisfaction_bonus": 1.0
+          },
+          "outcome": {
+            "email_id": "random-5-personal",
+            "handled_correctly": true,
+            "resolved": false,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": false,
+            "new_email_ids": [
+              "random-6-boss"
+            ],
+            "escalation_thread_created": false,
+            "satisfaction_delta": 0,
+            "notes": [
+              "Email delayed for later handling.",
+              "New emails arrived after the action."
+            ]
+          },
+          "delayed_events": [
+            {
+              "email_id": "dyn-13",
+              "scheduled_step": 6,
+              "reward": 12.0,
+              "caused_follow_up": false,
+              "caused_escalation_thread": false
+            }
+          ]
+        },
+        {
+          "time_step": 7,
+          "action": {
+            "email_id": "random-6-boss",
+            "action_type": "generate_reply",
+            "predicted_priority": "high",
+            "predicted_urgency": true,
+            "reply_tone": "professional",
+            "response_text": "Hello ceo@company.ai, thank you for reaching out. We are actively reviewing this matter and will provide a formal update soon.",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {
+              "decision_trace": {
+                "email_id": "random-6-boss",
+                "sender_importance": "boss",
+                "visible_urgency": false,
+                "known_deadline_step": null,
+                "requires_response": true,
+                "age_steps": 0,
+                "derived_tags": []
+              }
+            }
+          },
+          "reward": 22.0,
+          "metrics": {
+            "priority_correctness": 1.0,
+            "response_quality": 1.0,
+            "critical_handled": 1.0,
+            "tone_match": 1.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 0.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 0.0,
+            "efficiency_bonus": 0.0,
+            "empty_inbox_wait": 0.0,
+            "delayed_success": 1.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 0.0,
+            "delayed_satisfaction_bonus": 0.0
+          },
+          "outcome": {
+            "email_id": "random-6-boss",
+            "handled_correctly": true,
+            "resolved": true,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": false,
+            "new_email_ids": [],
+            "escalation_thread_created": false,
+            "satisfaction_delta": 2,
+            "notes": [
+              "Reply drafted and thread resolved."
+            ]
+          },
+          "delayed_events": [
+            {
+              "email_id": "random-5-personal",
+              "scheduled_step": 7,
+              "reward": 10.0,
+              "caused_follow_up": false,
+              "caused_escalation_thread": false
+            }
+          ]
+        },
+        {
+          "time_step": 8,
+          "action": {
+            "email_id": "random-5-personal",
+            "action_type": "delay_email",
+            "predicted_priority": "low",
+            "predicted_urgency": false,
+            "reply_tone": "friendly",
+            "response_text": "[Internal Note] Low priority. Delayed processing for family@home.net. No immediate response required.",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {
+              "decision_trace": {
+                "email_id": "random-5-personal",
+                "sender_importance": "friend",
+                "visible_urgency": false,
+                "known_deadline_step": null,
+                "requires_response": true,
+                "age_steps": 3,
+                "derived_tags": []
+              }
+            }
+          },
+          "reward": 17.0,
+          "metrics": {
+            "priority_correctness": 1.0,
+            "response_quality": 0.0,
+            "critical_handled": 0.0,
+            "tone_match": 0.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 0.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 0.0,
+            "efficiency_bonus": 0.0,
+            "empty_inbox_wait": 0.0,
+            "delayed_success": 1.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 0.0,
+            "delayed_satisfaction_bonus": 1.0
+          },
+          "outcome": {
+            "email_id": "random-5-personal",
+            "handled_correctly": true,
+            "resolved": false,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": false,
+            "new_email_ids": [
+              "random-8-client"
+            ],
+            "escalation_thread_created": false,
+            "satisfaction_delta": 0,
+            "notes": [
+              "Email delayed for later handling.",
+              "New emails arrived after the action."
+            ]
+          },
+          "delayed_events": [
+            {
+              "email_id": "random-6-boss",
+              "scheduled_step": 8,
+              "reward": 12.0,
+              "caused_follow_up": false,
+              "caused_escalation_thread": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "config_id": "founder_launch_dynamic",
+      "total_reward": 77.0,
+      "steps": 7,
+      "success_rate": 1.0,
+      "error_rate": 0.0,
+      "mistakes": 0,
+      "missed_deadlines": 0,
+      "escalation_threads": 0,
+      "history": [
+        {
+          "time_step": 1,
+          "action": {
+            "email_id": "dyn-2",
+            "action_type": "generate_reply",
+            "predicted_priority": "high",
+            "predicted_urgency": false,
+            "reply_tone": "helpful",
+            "response_text": "Hi design@studio.dev, I am looking into this right now! Let me gather the necessary details and get back to you shortly.",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {
+              "decision_trace": {
+                "email_id": "dyn-2",
+                "sender_importance": "client",
+                "visible_urgency": false,
+                "known_deadline_step": null,
+                "requires_response": true,
+                "age_steps": 0,
+                "derived_tags": [
+                  "design"
+                ]
+              }
+            }
+          },
+          "reward": 12.0,
+          "metrics": {
+            "priority_correctness": 1.0,
+            "response_quality": 1.0,
+            "critical_handled": 1.0,
+            "tone_match": 1.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 0.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 0.0,
+            "efficiency_bonus": 0.0,
+            "empty_inbox_wait": 0.0,
+            "delayed_success": 0.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 0.0,
+            "delayed_satisfaction_bonus": 0.0
+          },
+          "outcome": {
+            "email_id": "dyn-2",
+            "handled_correctly": true,
+            "resolved": true,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": false,
+            "new_email_ids": [],
+            "escalation_thread_created": false,
+            "satisfaction_delta": 2,
+            "notes": [
+              "Reply drafted and thread resolved."
+            ]
+          },
+          "delayed_events": []
+        },
+        {
+          "time_step": 2,
+          "action": {
+            "email_id": "dyn-1",
+            "action_type": "escalate_email",
+            "predicted_priority": "high",
+            "predicted_urgency": true,
+            "reply_tone": "professional",
+            "response_text": "Forwarding to management: The email from client@northstar.com requires immediate escalation to avoid negative downstream consequences. Please review.",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {
+              "decision_trace": {
+                "email_id": "dyn-1",
+                "sender_importance": "client",
+                "visible_urgency": true,
+                "known_deadline_step": 2,
+                "requires_response": true,
+                "age_steps": 1,
+                "derived_tags": [
+                  "milestone"
+                ]
+              }
+            }
+          },
+          "reward": 21.0,
+          "metrics": {
+            "priority_correctness": 1.0,
+            "response_quality": 0.0,
+            "critical_handled": 1.0,
+            "tone_match": 0.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 0.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 0.0,
+            "efficiency_bonus": 0.0,
+            "empty_inbox_wait": 0.0,
+            "delayed_success": 1.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 0.0,
+            "delayed_satisfaction_bonus": 1.0
+          },
+          "outcome": {
+            "email_id": "dyn-1",
+            "handled_correctly": true,
+            "resolved": true,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": false,
+            "new_email_ids": [
+              "dyn-4"
+            ],
+            "escalation_thread_created": false,
+            "satisfaction_delta": 1,
+            "notes": [
+              "Email escalated to manager.",
+              "New emails arrived after the action."
+            ]
+          },
+          "delayed_events": [
+            {
+              "email_id": "dyn-2",
+              "scheduled_step": 2,
+              "reward": 12.0,
+              "caused_follow_up": false,
+              "caused_escalation_thread": false
+            }
+          ]
+        },
+        {
+          "time_step": 3,
+          "action": {
+            "email_id": "dyn-4",
+            "action_type": "generate_reply",
+            "predicted_priority": "high",
+            "predicted_urgency": true,
+            "reply_tone": "professional",
+            "response_text": "Hello boss@company.ai, thank you for reaching out. We are actively reviewing this matter and will provide a formal update soon.",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {
+              "decision_trace": {
+                "email_id": "dyn-4",
+                "sender_importance": "boss",
+                "visible_urgency": false,
+                "known_deadline_step": null,
+                "requires_response": true,
+                "age_steps": 0,
+                "derived_tags": [
+                  "board"
+                ]
+              }
+            }
+          },
+          "reward": 14.0,
+          "metrics": {
+            "priority_correctness": 0.0,
+            "response_quality": 1.0,
+            "critical_handled": 0.0,
+            "tone_match": 1.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 0.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 0.0,
+            "efficiency_bonus": 0.0,
+            "empty_inbox_wait": 0.0,
+            "delayed_success": 1.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 0.0,
+            "delayed_satisfaction_bonus": 1.0
+          },
+          "outcome": {
+            "email_id": "dyn-4",
+            "handled_correctly": true,
+            "resolved": true,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": false,
+            "new_email_ids": [],
+            "escalation_thread_created": false,
+            "satisfaction_delta": 2,
+            "notes": [
+              "Reply drafted and thread resolved."
+            ]
+          },
+          "delayed_events": [
+            {
+              "email_id": "dyn-1",
+              "scheduled_step": 3,
+              "reward": 11.0,
+              "caused_follow_up": false,
+              "caused_escalation_thread": false
+            }
+          ]
+        },
+        {
+          "time_step": 4,
+          "action": {
+            "email_id": "dyn-3",
+            "action_type": "delay_email",
+            "predicted_priority": "low",
+            "predicted_urgency": false,
+            "reply_tone": "friendly",
+            "response_text": "[Internal Note] Low priority. Delayed processing for friend@alumni.org. No immediate response required.",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {
+              "decision_trace": {
+                "email_id": "dyn-3",
+                "sender_importance": "friend",
+                "visible_urgency": false,
+                "known_deadline_step": null,
+                "requires_response": true,
+                "age_steps": 3,
+                "derived_tags": []
+              }
+            }
+          },
+          "reward": 17.0,
+          "metrics": {
+            "priority_correctness": 1.0,
+            "response_quality": 0.0,
+            "critical_handled": 0.0,
+            "tone_match": 0.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 0.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 0.0,
+            "efficiency_bonus": 0.0,
+            "empty_inbox_wait": 0.0,
+            "delayed_success": 1.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 0.0,
+            "delayed_satisfaction_bonus": 1.0
+          },
+          "outcome": {
+            "email_id": "dyn-3",
+            "handled_correctly": true,
+            "resolved": false,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": false,
+            "new_email_ids": [
+              "dyn-5"
+            ],
+            "escalation_thread_created": false,
+            "satisfaction_delta": 0,
+            "notes": [
+              "Email delayed for later handling.",
+              "New emails arrived after the action."
+            ]
+          },
+          "delayed_events": [
+            {
+              "email_id": "dyn-4",
+              "scheduled_step": 4,
+              "reward": 12.0,
+              "caused_follow_up": false,
+              "caused_escalation_thread": false
+            }
+          ]
+        },
+        {
+          "time_step": 5,
+          "action": {
+            "email_id": "dyn-5",
+            "action_type": "classify_email",
+            "predicted_priority": "medium",
+            "predicted_urgency": false,
+            "reply_tone": "neutral",
+            "response_text": "[Internal Note] Archived email from unknown@opsmail.dev. No action needed.",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {
+              "decision_trace": {
+                "email_id": "dyn-5",
+                "sender_importance": "client",
+                "visible_urgency": false,
+                "known_deadline_step": null,
+                "requires_response": true,
+                "age_steps": 0,
+                "derived_tags": [
+                  "ambiguous"
+                ]
+              }
+            }
+          },
+          "reward": 11.0,
+          "metrics": {
+            "priority_correctness": 1.0,
+            "response_quality": 0.0,
+            "critical_handled": 0.0,
+            "tone_match": 0.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 1.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 0.0,
+            "efficiency_bonus": 0.0,
+            "empty_inbox_wait": 0.0,
+            "delayed_success": 1.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 0.0,
+            "delayed_satisfaction_bonus": 0.0
+          },
+          "outcome": {
+            "email_id": "dyn-5",
+            "handled_correctly": true,
+            "resolved": false,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": false,
+            "new_email_ids": [],
+            "escalation_thread_created": false,
+            "satisfaction_delta": 0,
+            "notes": [
+              "Email classified for later batching."
+            ]
+          },
+          "delayed_events": [
+            {
+              "email_id": "dyn-3",
+              "scheduled_step": 5,
+              "reward": 10.0,
+              "caused_follow_up": false,
+              "caused_escalation_thread": false
+            }
+          ]
+        },
+        {
+          "time_step": 6,
+          "action": {
+            "email_id": "dyn-5",
+            "action_type": "classify_email",
+            "predicted_priority": "medium",
+            "predicted_urgency": false,
+            "reply_tone": "neutral",
+            "response_text": "[Internal Note] Archived email from unknown@opsmail.dev. No action needed.",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {
+              "decision_trace": {
+                "email_id": "dyn-5",
+                "sender_importance": "client",
+                "visible_urgency": false,
+                "known_deadline_step": null,
+                "requires_response": true,
+                "age_steps": 1,
+                "derived_tags": [
+                  "ambiguous"
+                ]
+              }
+            }
+          },
+          "reward": 1.0,
+          "metrics": {
+            "priority_correctness": 1.0,
+            "response_quality": 0.0,
+            "critical_handled": 0.0,
+            "tone_match": 0.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 1.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 0.0,
+            "efficiency_bonus": 0.0,
+            "empty_inbox_wait": 0.0,
+            "delayed_success": 1.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 1.0,
+            "delayed_satisfaction_bonus": 0.0
+          },
+          "outcome": {
+            "email_id": "dyn-5",
+            "handled_correctly": true,
+            "resolved": false,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": false,
+            "new_email_ids": [],
+            "escalation_thread_created": false,
+            "satisfaction_delta": 0,
+            "notes": [
+              "Email classified for later batching."
+            ]
+          },
+          "delayed_events": [
+            {
+              "email_id": "dyn-5",
+              "scheduled_step": 6,
+              "reward": 0.0,
+              "caused_follow_up": false,
+              "caused_escalation_thread": false
+            }
+          ]
+        },
+        {
+          "time_step": 7,
+          "action": {
+            "email_id": "dyn-5",
+            "action_type": "classify_email",
+            "predicted_priority": "medium",
+            "predicted_urgency": false,
+            "reply_tone": "neutral",
+            "response_text": "[Internal Note] Archived email from unknown@opsmail.dev. No action needed.",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {
+              "decision_trace": {
+                "email_id": "dyn-5",
+                "sender_importance": "client",
+                "visible_urgency": false,
+                "known_deadline_step": null,
+                "requires_response": true,
+                "age_steps": 2,
+                "derived_tags": [
+                  "ambiguous"
+                ]
+              }
+            }
+          },
+          "reward": 1.0,
+          "metrics": {
+            "priority_correctness": 1.0,
+            "response_quality": 0.0,
+            "critical_handled": 0.0,
+            "tone_match": 0.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 1.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 0.0,
+            "efficiency_bonus": 0.0,
+            "empty_inbox_wait": 0.0,
+            "delayed_success": 1.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 1.0,
+            "delayed_satisfaction_bonus": 0.0
+          },
+          "outcome": {
+            "email_id": "dyn-5",
+            "handled_correctly": true,
+            "resolved": false,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": false,
+            "new_email_ids": [
+              "random-7-personal"
+            ],
+            "escalation_thread_created": false,
+            "satisfaction_delta": 0,
+            "notes": [
+              "Email classified for later batching.",
+              "New emails arrived after the action."
+            ]
+          },
+          "delayed_events": [
+            {
+              "email_id": "dyn-5",
+              "scheduled_step": 7,
+              "reward": 0.0,
+              "caused_follow_up": false,
+              "caused_escalation_thread": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "config_id": "ops_fire_drill_dynamic",
+      "total_reward": 127.0,
+      "steps": 8,
+      "success_rate": 0.88,
+      "error_rate": 0.0,
+      "mistakes": 0,
+      "missed_deadlines": 0,
+      "escalation_threads": 0,
+      "history": [
+        {
+          "time_step": 1,
+          "action": {
+            "email_id": "dyn-10",
+            "action_type": "escalate_email",
+            "predicted_priority": "high",
+            "predicted_urgency": false,
+            "reply_tone": "professional",
+            "response_text": "Forwarding to management: The email from csm@renewals.app requires immediate escalation to avoid negative downstream consequences. Please review.",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {
+              "decision_trace": {
+                "email_id": "dyn-10",
+                "sender_importance": "client",
+                "visible_urgency": false,
+                "known_deadline_step": null,
+                "requires_response": true,
+                "age_steps": 0,
+                "derived_tags": [
+                  "renewal"
+                ]
+              }
+            }
+          },
+          "reward": 9.0,
+          "metrics": {
+            "priority_correctness": 1.0,
+            "response_quality": 0.0,
+            "critical_handled": 1.0,
+            "tone_match": 0.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 0.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 0.0,
+            "efficiency_bonus": 0.0,
+            "empty_inbox_wait": 0.0,
+            "delayed_success": 0.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 0.0,
+            "delayed_satisfaction_bonus": 0.0
+          },
+          "outcome": {
+            "email_id": "dyn-10",
+            "handled_correctly": true,
+            "resolved": true,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": false,
+            "new_email_ids": [],
+            "escalation_thread_created": false,
+            "satisfaction_delta": 1,
+            "notes": [
+              "Email escalated to manager."
+            ]
+          },
+          "delayed_events": []
+        },
+        {
+          "time_step": 2,
+          "action": {
+            "email_id": "dyn-11",
+            "action_type": "ignore_email",
+            "predicted_priority": "low",
+            "predicted_urgency": false,
+            "reply_tone": "neutral",
+            "response_text": "[Internal Note] Archived email from travel@airline.com. No action needed.",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {
+              "decision_trace": {
+                "email_id": "dyn-11",
+                "sender_importance": "friend",
+                "visible_urgency": false,
+                "known_deadline_step": null,
+                "requires_response": false,
+                "age_steps": 1,
+                "derived_tags": []
+              }
+            }
+          },
+          "reward": 16.0,
+          "metrics": {
+            "priority_correctness": 1.0,
+            "response_quality": 0.0,
+            "critical_handled": 0.0,
+            "tone_match": 0.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 0.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 0.0,
+            "efficiency_bonus": 0.0,
+            "empty_inbox_wait": 0.0,
+            "delayed_success": 1.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 0.0,
+            "delayed_satisfaction_bonus": 1.0
+          },
+          "outcome": {
+            "email_id": "dyn-11",
+            "handled_correctly": true,
+            "resolved": true,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": false,
+            "new_email_ids": [
+              "dyn-12"
+            ],
+            "escalation_thread_created": false,
+            "satisfaction_delta": 0,
+            "notes": [
+              "Email ignored and removed from queue.",
+              "New emails arrived after the action."
+            ]
+          },
+          "delayed_events": [
+            {
+              "email_id": "dyn-10",
+              "scheduled_step": 2,
+              "reward": 11.0,
+              "caused_follow_up": false,
+              "caused_escalation_thread": false
+            }
+          ]
+        },
+        {
+          "time_step": 3,
+          "action": {
+            "email_id": "dyn-12",
+            "action_type": "generate_reply",
+            "predicted_priority": "high",
+            "predicted_urgency": true,
+            "reply_tone": "professional",
+            "response_text": "Hello legal@partner.org, thank you for reaching out. We are actively reviewing this matter and will provide a formal update soon.",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {
+              "decision_trace": {
+                "email_id": "dyn-12",
+                "sender_importance": "client",
+                "visible_urgency": true,
+                "known_deadline_step": 3,
+                "requires_response": true,
+                "age_steps": 0,
+                "derived_tags": [
+                  "contract"
+                ]
+              }
+            }
+          },
+          "reward": 22.0,
+          "metrics": {
+            "priority_correctness": 1.0,
+            "response_quality": 1.0,
+            "critical_handled": 1.0,
+            "tone_match": 1.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 0.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 0.0,
+            "efficiency_bonus": 0.0,
+            "empty_inbox_wait": 0.0,
+            "delayed_success": 1.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 0.0,
+            "delayed_satisfaction_bonus": 0.0
+          },
+          "outcome": {
+            "email_id": "dyn-12",
+            "handled_correctly": true,
+            "resolved": true,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": false,
+            "new_email_ids": [],
+            "escalation_thread_created": false,
+            "satisfaction_delta": 2,
+            "notes": [
+              "Reply drafted and thread resolved."
+            ]
+          },
+          "delayed_events": [
+            {
+              "email_id": "dyn-11",
+              "scheduled_step": 3,
+              "reward": 10.0,
+              "caused_follow_up": false,
+              "caused_escalation_thread": false
+            }
+          ]
+        },
+        {
+          "time_step": 4,
+          "action": {
+            "email_id": "none",
+            "action_type": "ignore_email",
+            "predicted_priority": null,
+            "predicted_urgency": null,
+            "reply_tone": null,
+            "response_text": "",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {}
+          },
+          "reward": 12.0,
+          "metrics": {
+            "priority_correctness": 0.0,
+            "response_quality": 0.0,
+            "critical_handled": 0.0,
+            "tone_match": 0.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 0.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 0.0,
+            "efficiency_bonus": 0.0,
+            "empty_inbox_wait": 1.0,
+            "delayed_success": 1.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 0.0,
+            "delayed_satisfaction_bonus": 1.0
+          },
+          "outcome": {
+            "email_id": "none",
+            "handled_correctly": false,
+            "resolved": false,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": false,
+            "new_email_ids": [
+              "dyn-13"
+            ],
+            "escalation_thread_created": false,
+            "satisfaction_delta": 0,
+            "notes": [
+              "Action referenced an unknown email.",
+              "New emails arrived after the action."
+            ]
+          },
+          "delayed_events": [
+            {
+              "email_id": "dyn-12",
+              "scheduled_step": 4,
+              "reward": 12.0,
+              "caused_follow_up": false,
+              "caused_escalation_thread": false
+            }
+          ]
+        },
+        {
+          "time_step": 5,
+          "action": {
+            "email_id": "dyn-13",
+            "action_type": "generate_reply",
+            "predicted_priority": "high",
+            "predicted_urgency": false,
+            "reply_tone": "professional",
+            "response_text": "Hello ceo@company.ai, thank you for reaching out. We are actively reviewing this matter and will provide a formal update soon.",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {
+              "decision_trace": {
+                "email_id": "dyn-13",
+                "sender_importance": "boss",
+                "visible_urgency": false,
+                "known_deadline_step": null,
+                "requires_response": true,
+                "age_steps": 0,
+                "derived_tags": [
+                  "board"
+                ]
+              }
+            }
+          },
+          "reward": 12.0,
+          "metrics": {
+            "priority_correctness": 1.0,
+            "response_quality": 1.0,
+            "critical_handled": 1.0,
+            "tone_match": 1.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 0.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 0.0,
+            "efficiency_bonus": 0.0,
+            "empty_inbox_wait": 0.0,
+            "delayed_success": 0.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 0.0,
+            "delayed_satisfaction_bonus": 0.0
+          },
+          "outcome": {
+            "email_id": "dyn-13",
+            "handled_correctly": true,
+            "resolved": true,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": false,
+            "new_email_ids": [
+              "random-5-personal"
+            ],
+            "escalation_thread_created": false,
+            "satisfaction_delta": 2,
+            "notes": [
+              "Reply drafted and thread resolved.",
+              "New emails arrived after the action."
+            ]
+          },
+          "delayed_events": []
+        },
+        {
+          "time_step": 6,
+          "action": {
+            "email_id": "random-5-personal",
+            "action_type": "delay_email",
+            "predicted_priority": "low",
+            "predicted_urgency": false,
+            "reply_tone": "friendly",
+            "response_text": "[Internal Note] Low priority. Delayed processing for family@home.net. No immediate response required.",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {
+              "decision_trace": {
+                "email_id": "random-5-personal",
+                "sender_importance": "friend",
+                "visible_urgency": false,
+                "known_deadline_step": null,
+                "requires_response": true,
+                "age_steps": 0,
+                "derived_tags": []
+              }
+            }
+          },
+          "reward": 17.0,
+          "metrics": {
+            "priority_correctness": 1.0,
+            "response_quality": 0.0,
+            "critical_handled": 0.0,
+            "tone_match": 0.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 0.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 0.0,
+            "efficiency_bonus": 0.0,
+            "empty_inbox_wait": 0.0,
+            "delayed_success": 1.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 0.0,
+            "delayed_satisfaction_bonus": 1.0
+          },
+          "outcome": {
+            "email_id": "random-5-personal",
+            "handled_correctly": true,
+            "resolved": false,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": false,
+            "new_email_ids": [
+              "random-6-boss"
+            ],
+            "escalation_thread_created": false,
+            "satisfaction_delta": 0,
+            "notes": [
+              "Email delayed for later handling.",
+              "New emails arrived after the action."
+            ]
+          },
+          "delayed_events": [
+            {
+              "email_id": "dyn-13",
+              "scheduled_step": 6,
+              "reward": 12.0,
+              "caused_follow_up": false,
+              "caused_escalation_thread": false
+            }
+          ]
+        },
+        {
+          "time_step": 7,
+          "action": {
+            "email_id": "random-6-boss",
+            "action_type": "generate_reply",
+            "predicted_priority": "high",
+            "predicted_urgency": true,
+            "reply_tone": "professional",
+            "response_text": "Hello ceo@company.ai, thank you for reaching out. We are actively reviewing this matter and will provide a formal update soon.",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {
+              "decision_trace": {
+                "email_id": "random-6-boss",
+                "sender_importance": "boss",
+                "visible_urgency": false,
+                "known_deadline_step": null,
+                "requires_response": true,
+                "age_steps": 0,
+                "derived_tags": []
+              }
+            }
+          },
+          "reward": 22.0,
+          "metrics": {
+            "priority_correctness": 1.0,
+            "response_quality": 1.0,
+            "critical_handled": 1.0,
+            "tone_match": 1.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 0.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 0.0,
+            "efficiency_bonus": 0.0,
+            "empty_inbox_wait": 0.0,
+            "delayed_success": 1.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 0.0,
+            "delayed_satisfaction_bonus": 0.0
+          },
+          "outcome": {
+            "email_id": "random-6-boss",
+            "handled_correctly": true,
+            "resolved": true,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": false,
+            "new_email_ids": [],
+            "escalation_thread_created": false,
+            "satisfaction_delta": 2,
+            "notes": [
+              "Reply drafted and thread resolved."
+            ]
+          },
+          "delayed_events": [
+            {
+              "email_id": "random-5-personal",
+              "scheduled_step": 7,
+              "reward": 10.0,
+              "caused_follow_up": false,
+              "caused_escalation_thread": false
+            }
+          ]
+        },
+        {
+          "time_step": 8,
+          "action": {
+            "email_id": "random-5-personal",
+            "action_type": "delay_email",
+            "predicted_priority": "low",
+            "predicted_urgency": false,
+            "reply_tone": "friendly",
+            "response_text": "[Internal Note] Low priority. Delayed processing for family@home.net. No immediate response required.",
+            "delay_steps": 1,
+            "escalate_target": "manager",
+            "metadata": {
+              "decision_trace": {
+                "email_id": "random-5-personal",
+                "sender_importance": "friend",
+                "visible_urgency": false,
+                "known_deadline_step": null,
+                "requires_response": true,
+                "age_steps": 3,
+                "derived_tags": []
+              }
+            }
+          },
+          "reward": 17.0,
+          "metrics": {
+            "priority_correctness": 1.0,
+            "response_quality": 0.0,
+            "critical_handled": 0.0,
+            "tone_match": 0.0,
+            "ignored_critical": 0.0,
+            "urgent_delay": 0.0,
+            "unnecessary_escalation": 0.0,
+            "efficient_batching": 0.0,
+            "follow_up_penalty": 0.0,
+            "deadline_penalty": 0.0,
+            "efficiency_bonus": 0.0,
+            "empty_inbox_wait": 0.0,
+            "delayed_success": 1.0,
+            "delayed_escalation_penalty": 0.0,
+            "delayed_deadline_penalty": 0.0,
+            "delayed_satisfaction_bonus": 1.0
+          },
+          "outcome": {
+            "email_id": "random-5-personal",
+            "handled_correctly": true,
+            "resolved": false,
+            "follow_up_created": false,
+            "overdue_penalty_triggered": false,
+            "new_email_ids": [
+              "random-8-client"
+            ],
+            "escalation_thread_created": false,
+            "satisfaction_delta": 0,
+            "notes": [
+              "Email delayed for later handling.",
+              "New emails arrived after the action."
+            ]
+          },
+          "delayed_events": [
+            {
+              "email_id": "random-6-boss",
+              "scheduled_step": 8,
+              "reward": 12.0,
+              "caused_follow_up": false,
+              "caused_escalation_thread": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

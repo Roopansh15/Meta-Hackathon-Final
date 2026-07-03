@@ -1,0 +1,9 @@
+name: InboxWorld
+version: "1.0.0"
+description: "A Multi-Agent Email Triage Environment with hidden urgency, blocked tasks, and delayed consequences."
+entry_point: "src.inboxworld.environment:EmailEnvironment"
+keywords:
+  - nlp
+  - tools
+  - multi-agent
+  - email
