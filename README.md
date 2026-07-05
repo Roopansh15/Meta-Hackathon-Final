@@ -3,21 +3,20 @@
 [![OpenEnv Compliant](https://img.shields.io/badge/OpenEnv-Compliant-brightgreen.svg)](https://openenv.ai/)
 [![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/RoopanshSaxena/FinalProject)
 
----
 
-## The Story: Why We Built InboxWorld
+## The Story: Why I Built InboxWorld
 
 ### 1. The Problem (Why it matters)
 We are all drowning in emails. But more importantly, the AI industry is currently obsessed with building simple "Chatbots" that only grade immediate text output. **InboxWorld** targets a critical capability gap: **Long-Horizon Planning in Corporate Triage.** An AI needs to know that delaying an email from the CEO today will cause a catastrophic escalation tomorrow. This is an underexplored domain in RL: teaching an AI to survive a high-stakes, time-sensitive environment.
 
 ### 2. The Environment (What the agent sees and does)
-Instead of a boring grid-world, we built a chaotic inbox physics engine strictly following the OpenEnv standard. 
+Instead of a boring grid-world, i built a chaotic inbox physics engine strictly following the OpenEnv standard. 
 * **The Ticking Clock:** Every action advances the `time_step`. You cannot stall.
 * **The Action Space:** The agent chooses from a structured `EmailAgentAction` space (Delay, Escalate, Reply, Ignore) rather than just writing free-form text.
 * **The Delayed Reward Buffer:** The agent gets immediate lightweight points (+5) for matching the correct tone, but faces massive **Delayed Penalties (-10)** 3 turns later if it misses a deadline or angers a VIP. 
 
 ### 3. The Architecture (How it survives)
-To beat this environment, we replaced the monolithic prompt with a **Four-Role Multi-Agent System**:
+To beat this environment, i replaced the monolithic prompt with a **Four-Role Multi-Agent System**:
 1.  **Inbox Analyst:** Extracts intent using keywords.
 2.  **Priority Planner:** Re-evaluates urgency based on context.
 3.  **Responder Agent:** Chooses the action.
