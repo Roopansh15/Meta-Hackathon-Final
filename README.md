@@ -12,43 +12,25 @@ pinned: false
 
 # InboxWorld: Teaching LLMs to Survive Corporate Triage
 
-InboxWorld keeps our Round 1 problem statement, **email triage**, and turns it into an OpenEnv-compatible training environment for long-horizon, context-aware agents.
+## The Story: Why We Built InboxWorld
 
-Most email triage demos stop at classification. InboxWorld instead models the inbox as a partially observable world where decisions have consequences: missed deadlines, angry follow-ups, escalation threads, and user satisfaction changes.
+### 1. The Problem (Why it matters)
+We are all drowning in emails. But more importantly, the AI industry is currently obsessed with building simple "Chatbots" that only grade immediate text output. **InboxWorld** targets a critical capability gap: **Long-Horizon Planning in Corporate Triage.** An AI needs to know that delaying an email from the CEO today will cause a catastrophic escalation tomorrow. This is an underexplored domain in RL: teaching an AI to survive a high-stakes, time-sensitive environment.
 
-## Environment
+### 2. The Environment (What the agent sees and does)
+Instead of a boring grid-world, we built a chaotic inbox physics engine strictly following the OpenEnv standard. 
+* **The Ticking Clock:** Every action advances the `time_step`. You cannot stall.
+* **The Action Space:** The agent chooses from a structured `EmailAgentAction` space (Delay, Escalate, Reply, Ignore) rather than just writing free-form text.
+* **The Delayed Reward Buffer:** The agent gets immediate lightweight points (+5) for matching the correct tone, but faces massive **Delayed Penalties (-10)** 3 turns later if it misses a deadline or angers a VIP. 
 
-The environment simulates a busy professional inbox with:
+### 3. The Architecture (How it survives)
+To beat this environment, we replaced the monolithic prompt with a **Four-Role Multi-Agent System**:
+1.  **Inbox Analyst:** Extracts intent using keywords.
+2.  **Priority Planner:** Re-evaluates urgency based on context.
+3.  **Responder Agent:** Chooses the action.
+4.  **Supervisor Agent:** Acts as an intermediate step-level verifier. It intercepts dangerous logic (e.g., overriding an attempt to ignore the CEO) to prevent reward-hacking.
 
-- a ticking `time_step`
-- visible and hidden urgency
-- stochastic email arrivals
-- delayed reward events
-- follow-up and escalation generation
-- user profile and sender-importance context
-
-Hidden evaluator labels such as true priority, expected action, expected tone, and hidden intent are not exposed to the policy. The agent only sees public inbox state.
-
-## Action Space
-
-The policy returns a structured `EmailAgentAction`:
-
-- `classify_email`
-- `generate_reply`
-- `delay_email`
-- `escalate_email`
-- `ignore_email`
-
-Each action can include predicted priority, predicted urgency, reply tone, response text, and metadata.
-
-## Multi-Agent Policy
-
-The local policy uses four cooperating roles:
-
-1. `Inbox Analyst`: extracts visible intent and urgency cues.
-2. `Priority Planner`: combines sender importance, deadlines, and semantic signals.
-3. `Responder Agent`: chooses the structured action and tone.
-4. `Supervisor Agent`: checks visible safety constraints before submission.
+---
 
 ## Simulation Results
 
