@@ -1,16 +1,9 @@
----
-title: InboxWorld
-emoji: 📬
-colorFrom: blue
-colorTo: green
-sdk: gradio
-sdk_version: "5.0.0"
-app_file: app.py
-python_version: "3.10"
-pinned: false
----
-
 # InboxWorld: Teaching LLMs to Survive Corporate Triage
+
+[![OpenEnv Compliant](https://img.shields.io/badge/OpenEnv-Compliant-brightgreen.svg)](https://openenv.ai/)
+[![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/RoopanshSaxena/InboxWorld)
+
+---
 
 ## The Story: Why We Built InboxWorld
 
